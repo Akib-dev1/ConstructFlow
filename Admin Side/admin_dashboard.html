@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ConstructFlow Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <h3>ConstructFlow</h3>
+        <p>Admin Portal</p>
+      </div>
+
+      <p class="menu-title">OVERVIEW</p>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Projects</a>
+      <a href="#">Project Monitoring</a>
+
+      <p class="menu-title">PEOPLE</p>
+      <a href="#">Site Managers</a>
+      <a href="#">Suppliers</a>
+
+      <p class="menu-title">PROCUREMENT</p>
+      <a href="#">Material Requests</a>
+      <a href="#">RFQ Management</a>
+      <a href="#">Quotation Comparison</a>
+      <a href="#">Purchase Orders</a>
+
+      <p class="menu-title">FINANCE</p>
+      <a href="#">Budgets & Expenses</a>
+      <a href="#">Invoices & Payments</a>
+
+      <p class="menu-title">INSIGHTS</p>
+      <a href="#">Reports & Analytics</a>
+      <a href="#">Audit Logs</a>
+
+      <div class="sidebar-bottom">
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
+    <!-- Main Area -->
+    <div class="main">
+      <!-- Top Navbar -->
+      <div class="topbar">
+        <p>Admin &gt; Dashboard</p>
+
+        <div class="top-right">
+          <input type="text" placeholder="Search projects, suppliers..." />
+          <span>Notifications</span>
+          <span>Alex Morgan</span>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div class="content">
+        <div class="page-heading">
+          <div>
+            <h1>Dashboard Overview</h1>
+            <p>
+              Monitor your projects, procurement, budgets, and construction
+              operations in one place.
+            </p>
+          </div>
+
+          <div class="heading-buttons">
+            <button>Tuesday, 20 Oct 2026</button>
+            <button>Generate Report</button>
+            <button class="primary-btn">+ New Project</button>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+          <div class="action-card">
+            <a href="">Create Project</a>
+            <p>New site setup</p>
+          </div>
+
+          <div class="action-card">
+            <a href="">Review Requests</a>
+            <p>9 pending approvals</p>
+          </div>
+
+          <div class="action-card">
+            <a href="">Manage Suppliers</a>
+            <p>38 registered</p>
+          </div>
+
+          <div class="action-card">
+            <a href="">Export Summary</a>
+            <p>CSV or PDF</p>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+          <div class="stat-card">
+            <p>Total Projects</p>
+            <h2>24</h2>
+            <small id="green-txt"> 6 completed this year </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Active Projects</p>
+            <h2>12</h2>
+            <small id="orange-txt"> 3 approaching deadlines </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Registered Suppliers</p>
+            <h2>38</h2>
+            <small>5 awaiting verification</small>
+          </div>
+
+          <div class="stat-card">
+            <p>Pending Approvals</p>
+            <h2>9</h2>
+            <small id="red-txt"> 4 urgent requests </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Total Project Budget</p>
+            <h2>৳85.6M</h2>
+            <small>Across all 24 projects</small>
+          </div>
+
+          <div class="stat-card">
+            <p>Total Expenses</p>
+            <h2>৳52.4M</h2>
+            <small>61.2% of allocated budget</small>
+          </div>
+
+          <div class="stat-card">
+            <p>Active Purchase Orders</p>
+            <h2>18</h2>
+            <small id="blue-txt"> 6 deliveries in progress </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Material Stock Alerts</p>
+            <h2>7</h2>
+            <small id="red-txt"> 2 critical shortages </small>
+          </div>
+        </div>
+
+        <!-- Recent Projects -->
+        <div class="projects-section">
+          <div class="section-heading">
+            <h3>Recent Projects</h3>
+            <a href="#">View All Projects</a>
+          </div>
+
+          <div class="filters">
+            <input type="text" placeholder="Filter projects by title..." />
+
+            <select>
+              <option>All Statuses</option>
+              <option>In Progress</option>
+              <option>Near Completion</option>
+              <option>Delayed</option>
+            </select>
+
+            <select>
+              <option>All Locations</option>
+              <option>Dhaka</option>
+              <option>Chattogram</option>
+              <option>Gazipur</option>
+              <option>Sylhet</option>
+            </select>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>PROJECT NAME</th>
+                <th>LOCATION</th>
+                <th>SITE MANAGER</th>
+                <th>BUDGET</th>
+                <th>PROGRESS</th>
+                <th>STATUS</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <b>Residential Tower A</b>
+                  <small>PRJ-101</small>
+                </td>
+                <td>Dhaka</td>
+                <td>Rahim Ahmed</td>
+                <td>৳12.0M</td>
+                <td>72%</td>
+                <td>
+                  <span class="status in-progress"> In Progress </span>
+                </td>
+                <td><a href="#">View</a></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Commercial Complex B</b>
+                  <small>PRJ-102</small>
+                </td>
+                <td>Chattogram</td>
+                <td>Karim Hasan</td>
+                <td>৳20.0M</td>
+                <td>54%</td>
+                <td>
+                  <span class="status in-progress"> In Progress </span>
+                </td>
+                <td><a href="#">View</a></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Green Valley Apartments</b>
+                  <small>PRJ-103</small>
+                </td>
+                <td>Gazipur</td>
+                <td>Nusrat Jahan</td>
+                <td>৳9.5M</td>
+                <td>89%</td>
+                <td>
+                  <span class="status near-completion"> Near Completion </span>
+                </td>
+                <td><a href="#">View</a></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>City Center Plaza</b>
+                  <small>PRJ-104</small>
+                </td>
+                <td>Dhaka</td>
+                <td>Tanvir Islam</td>
+                <td>৳18.0M</td>
+                <td>35%</td>
+                <td>
+                  <span class="status delayed"> Delayed </span>
+                </td>
+                <td><a href="#">View</a></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Office Building C</b>
+                  <small>PRJ-105</small>
+                </td>
+                <td>Sylhet</td>
+                <td>Mahmud Rahman</td>
+                <td>৳8.0M</td>
+                <td>91%</td>
+                <td>
+                  <span class="status near-completion"> Near Completion </span>
+                </td>
+                <td><a href="#">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
