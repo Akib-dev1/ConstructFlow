@@ -290,3 +290,154 @@ td a {
   background-color: #ffecec;
   color: #dc2626;
 }
+
+/* Project Management Page */
+
+/* Project Statistics */
+
+.project-stats {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.project-stats .stat-card {
+  height: 160px;
+  padding: 20px;
+}
+
+.project-stats .stat-card p {
+  font-size: 13px;
+  margin-bottom: 35px;
+  color: #526783;
+}
+
+.project-stats .stat-card h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.project-stats .stat-card small {
+  font-size: 12px;
+}
+
+.project-stats .red {
+  color: #dc2626;
+}
+
+/* Project Filters */
+
+.project-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 20px 15px;
+  border: 1px solid #dfe5ee;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.project-filters input {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #dfe5ee;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.project-filters select {
+  padding: 12px 10px;
+  border: 1px solid #dfe5ee;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.project-filters select:first-of-type {
+  margin-left: auto;
+}
+
+.project-filters button {
+  padding: 12px;
+  color: #526783;
+}
+
+/* Projects Table Heading */
+
+.project-table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #dfe5ee;
+}
+
+.project-table-heading h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.project-table-heading p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.project-count {
+  background-color: #eaf1ff;
+  color: #2563eb;
+  padding: 7px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* Management Table */
+
+.management-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.management-table th {
+  padding: 17px 12px;
+  font-size: 11px;
+  color: #526783;
+  background-color: #f7f9fc;
+}
+
+.management-table td {
+  padding: 18px 12px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.management-table td b {
+  color: #111827;
+  font-size: 12px;
+}
+
+.management-table td small {
+  display: flex;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.management-table tbody tr:hover {
+  background-color: #f8faff;
+}
+
+/* Table Colors */
+
+.management-table .red {
+  color: #dc2626;
+}
+
+.management-table .green {
+  color: #15803d;
+}
+
+/* Planning Status */
+
+.planning {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
