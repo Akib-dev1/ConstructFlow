@@ -441,3 +441,159 @@ td a {
   background-color: #f1f5f9;
   color: #64748b;
 }
+
+/* Site Manager Management Page */
+
+/* Manager Statistics */
+
+.manager-stats {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.manager-stats .stat-card {
+  height: 115px;
+  padding: 18px;
+}
+
+.manager-stats .stat-card p {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.manager-stats .stat-card h2 {
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+
+.manager-stats .stat-card small {
+  font-size: 11px;
+}
+
+/* Manager Filters */
+
+.manager-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 20px 15px;
+  border: 1px solid #dfe5ee;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.manager-filters input {
+  width: 280px;
+  padding: 12px;
+  border: 1px solid #dfe5ee;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.manager-filters select {
+  padding: 12px 10px;
+  border: 1px solid #dfe5ee;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.manager-filters select:first-of-type {
+  margin-left: auto;
+}
+
+.manager-filters button {
+  padding: 12px;
+  color: #526783;
+}
+
+/* Manager Table Heading */
+
+.manager-table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #dfe5ee;
+}
+
+.manager-table-heading h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.manager-table-heading p {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.manager-count {
+  background-color: #eaf1ff;
+  color: #2563eb;
+  padding: 7px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* Manager Table */
+
+.manager-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manager-table th {
+  padding: 16px 12px;
+  font-size: 11px;
+  color: #526783;
+  background-color: #f7f9fc;
+}
+
+.manager-table td {
+  padding: 18px 12px;
+  font-size: 12px;
+  color: #475569;
+  vertical-align: middle;
+}
+
+.manager-table td b {
+  color: #111827;
+  font-size: 12px;
+}
+
+.manager-table td small {
+  display: flex;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.manager-table tbody tr:hover {
+  background-color: #f8faff;
+}
+
+/* Project Badges */
+
+.project-badge {
+  background-color: #eaf1ff;
+  color: #2563eb;
+  padding: 5px 9px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.unassigned-badge {
+  background-color: #f1f5f9;
+  color: #64748b;
+  padding: 5px 9px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+/* Inactive Status */
+
+.inactive {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
