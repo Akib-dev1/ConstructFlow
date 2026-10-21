@@ -479,3 +479,107 @@ td strong {
     color: #064f88;
     background: #e8f0ff;
 }
+
+
+
+.quotation-panel {
+    margin-top: 18px;
+}
+
+.view-all {
+    color: #075da7;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.invoice-panel {
+    padding-bottom: 13px;
+}
+
+.invoice-panel .section-heading {
+    padding-bottom: 15px;
+}
+
+.invoice-panel .section-heading h2 {
+    font-size: 16px;
+}
+
+.invoice-panel .section-heading span {
+    font-size: 10px;
+}
+
+.invoice-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 13px 13px;
+    padding: 12px 8px;
+    background: #eff4ff;
+    border-radius: 9px;
+}
+
+.total-circle {
+    width: 76px;
+    height: 76px;
+    border: 7px solid #dce8ff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.total-circle span {
+    color: #5b6b80;
+    font-size: 8px;
+}
+
+.total-circle strong {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.invoice-legend {
+    min-width: 0;
+}
+
+.invoice-legend p {
+    font-size: 9px;
+    margin: 7px 0;
+    white-space: nowrap;
+}
+
+.invoice-legend strong {
+    font-size: 9px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.green-dot {
+    background: #087449;
+}
+
+.blue-dot {
+    background: #0786bd;
+}
+
+.gray-dot {
+    background: #b8c2cf;
+}
+
+.invoice-button {
+    display: block;
+    width: calc(100% - 26px);
+    margin: 0 13px;
+    background: #dce8ff;
+    color: #15243a;
+}
