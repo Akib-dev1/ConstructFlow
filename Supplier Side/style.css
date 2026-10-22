@@ -108,6 +108,7 @@ body {
 
 .small-badge.green {
     background: #07865f;
+    color: white;
 }
 
 .small-badge.blue {
