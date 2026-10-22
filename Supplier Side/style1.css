@@ -131,3 +131,112 @@ body {
 .sign-out {
   color: #ff5b5b;
 }
+
+
+
+/* ---------- Main ---------- */
+.main {
+  flex: 1;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.top-text {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.verified {
+  background-color: #e0f2fe;
+  color: #0b5cab;
+  font-size: 11px;
+  padding: 10px 16px;
+  border-radius: 20px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.search-circle {
+  width: 40px;
+  height: 36px;
+  background-color: #f1f5f9;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.payout {
+  background-color: #f1f5f9;
+  padding: 7px 14px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payout-label {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.payout-amount {
+  color: #0b5cab;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.bell {
+  width: 22px;
+  height: 22px;
+  background-color: #dc2626;
+  color: #ffffff;
+  border-radius: 11px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-text {
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #0b78d1;
+  color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
