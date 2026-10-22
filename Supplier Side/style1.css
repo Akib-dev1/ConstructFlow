@@ -348,3 +348,96 @@ h1 {
   font-size: 20px;
   font-weight: bold;
 }
+
+
+
+
+/* ---------- Status cards ---------- */
+.status-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.status-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 12px;
+  border-top: 3px solid #ffffff;
+}
+
+.status-card.orange-line { border-top: 3px solid #f59e0b; }
+.status-card.green-line { border-top: 3px solid #10b981; }
+
+.status-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.count {
+  width: 24px;
+  height: 24px;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count.yellow { background-color: #fef3c7; }
+.count.mint { background-color: #bbf7d0; }
+
+.status-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.status-note {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* ---------- Filter bar ---------- */
+.filter-bar {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.filter-input {
+  width: 190px;
+  padding: 11px 12px;
+  border: none;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.filter-select {
+  flex: 1;
+  padding: 11px 10px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.filter-button {
+  padding: 0 16px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
