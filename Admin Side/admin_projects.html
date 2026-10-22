@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Management</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <h3>ConstructFlow</h3>
+        <p>Admin Portal</p>
+      </div>
+
+      <p class="menu-title">OVERVIEW</p>
+      <a href="admin_dashboard.html">Dashboard</a>
+      <a href="admin_projects.html" class="active">Projects</a>
+      <a href="#">Project Monitoring</a>
+
+      <p class="menu-title">PEOPLE</p>
+      <a href="admin_sitemanagers.html">Site Managers</a>
+      <a href="#">Suppliers</a>
+
+      <p class="menu-title">PROCUREMENT</p>
+      <a href="#">Material Requests</a>
+      <a href="#">RFQ Management</a>
+      <a href="#">Quotation Comparison</a>
+      <a href="#">Purchase Orders</a>
+
+      <p class="menu-title">FINANCE</p>
+      <a href="#">Budgets & Expenses</a>
+      <a href="#">Invoices & Payments</a>
+
+      <p class="menu-title">INSIGHTS</p>
+      <a href="#">Reports & Analytics</a>
+      <a href="#">Audit Logs</a>
+
+      <div class="sidebar-bottom">
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
+    <!-- Main Area -->
+    <div class="main">
+      <!-- Top Navigation -->
+      <div class="topbar">
+        <p>Admin &gt; Projects</p>
+
+        <div class="top-right">
+          <input type="text" placeholder="Search projects, suppliers..." />
+          <span>Notifications</span>
+          <span>Alex Morgan</span>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="content">
+        <!-- Page Heading -->
+        <div class="page-heading">
+          <div>
+            <h1>Project Management</h1>
+            <p>
+              Manage construction projects, monitor progress, and track project
+              information across all active sites.
+            </p>
+          </div>
+
+          <div class="heading-buttons">
+            <button>Export Projects</button>
+            <button class="primary-btn">+ Create Project</button>
+          </div>
+        </div>
+
+        <!-- Project Statistics -->
+        <div class="stats project-stats">
+          <div class="stat-card">
+            <p>TOTAL PROJECTS</p>
+            <h2>24</h2>
+            <small> All registered company projects </small>
+          </div>
+
+          <div class="stat-card">
+            <p>ACTIVE PROJECTS</p>
+            <h2>12</h2>
+            <small class="green"> Currently under active construction </small>
+          </div>
+
+          <div class="stat-card">
+            <p>COMPLETED PROJECTS</p>
+            <h2>6</h2>
+            <small> Successfully signed off & delivered </small>
+          </div>
+
+          <div class="stat-card">
+            <p>DELAYED PROJECTS</p>
+            <h2 class="red">3</h2>
+            <small class="red"> Require immediate inspection </small>
+          </div>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="project-filters">
+          <input
+            type="text"
+            placeholder="Search by project name or location..."
+          />
+
+          <select>
+            <option>Sort by Status</option>
+            <option>All Projects</option>
+            <option>Active</option>
+            <option>Planning</option>
+            <option>Delayed</option>
+            <option>Completed</option>
+          </select>
+
+          <select>
+            <option>All Locations</option>
+            <option>Dhaka</option>
+            <option>Chattogram</option>
+            <option>Gazipur</option>
+            <option>Sylhet</option>
+          </select>
+
+          <select>
+            <option>All Managers</option>
+            <option>Rahim Ahmed</option>
+            <option>Karim Hasan</option>
+            <option>Nusrat Jahan</option>
+            <option>Tanvir Islam</option>
+            <option>Mahmud Rahman</option>
+          </select>
+
+          <button>Reset</button>
+        </div>
+
+        <!-- Projects Table -->
+        <div class="projects-section">
+          <div class="project-table-heading">
+            <div>
+              <h3>All Projects</h3>
+              <p>
+                Overview of construction operations, resource distribution, and
+                timelines across the company.
+              </p>
+            </div>
+
+            <span class="project-count"> 24 projects found </span>
+          </div>
+
+          <table class="management-table">
+            <thead>
+              <tr>
+                <th>PROJECT ID</th>
+                <th>PROJECT NAME</th>
+                <th>LOCATION</th>
+                <th>SITE MANAGER</th>
+                <th>BUDGET</th>
+                <th>TIMELINE</th>
+                <th>PROGRESS</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>PRJ-001</td>
+                <td>
+                  <b>Residential Tower A</b>
+                </td>
+                <td>Dhaka</td>
+                <td>Rahim Ahmed</td>
+                <td>৳12,00,000</td>
+                <td>
+                  10 Jan 2026
+                  <small>Due 30 Dec 2026</small>
+                </td>
+                <td>72%</td>
+                <td>
+                  <span class="status in-progress"> Active </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-002</td>
+                <td>
+                  <b>Commercial Complex B</b>
+                </td>
+                <td>Chattogram</td>
+                <td>Karim Hasan</td>
+                <td>৳20,00,000</td>
+                <td>
+                  05 Feb 2026
+                  <small>Due 15 Mar 2027</small>
+                </td>
+                <td>54%</td>
+                <td>
+                  <span class="status in-progress"> Active </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-003</td>
+                <td>
+                  <b>Green Valley Apartments</b>
+                </td>
+                <td>Gazipur</td>
+                <td>Nusrat Jahan</td>
+                <td>৳9,50,000</td>
+                <td>
+                  15 Mar 2025
+                  <small>Due 25 Nov 2026</small>
+                </td>
+                <td>89%</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-004</td>
+                <td>
+                  <b>City Center Plaza</b>
+                </td>
+                <td>Dhaka</td>
+                <td>Tanvir Islam</td>
+                <td>৳18,00,000</td>
+                <td>
+                  01 Dec 2025
+                  <small class="red"> Due 30 Sep 2026 </small>
+                </td>
+                <td class="red">35%</td>
+                <td>
+                  <span class="status delayed"> Delayed </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-005</td>
+                <td>
+                  <b>Office Building C</b>
+                </td>
+                <td>Sylhet</td>
+                <td>Mahmud Rahman</td>
+                <td>৳8,00,000</td>
+                <td>
+                  15 Apr 2025
+                  <small>Due 30 Nov 2026</small>
+                </td>
+                <td>91%</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-006</td>
+                <td>
+                  <b>Riverside Residential Complex</b>
+                </td>
+                <td>Dhaka</td>
+                <td>Rahim Ahmed</td>
+                <td>৳15,00,000</td>
+                <td>
+                  01 Jun 2025
+                  <small class="green"> Delivered 15 Oct 2026 </small>
+                </td>
+                <td class="green">100%</td>
+                <td>
+                  <span class="status near-completion"> Completed </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-007</td>
+                <td>
+                  <b>Metro Shopping Arcade</b>
+                </td>
+                <td>Chattogram</td>
+                <td>Karim Hasan</td>
+                <td>৳11,50,000</td>
+                <td>
+                  01 Sep 2026
+                  <small>Due 30 Aug 2027</small>
+                </td>
+                <td>12%</td>
+                <td>
+                  <span class="status in-progress"> Active </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>PRJ-008</td>
+                <td>
+                  <b>Sunrise Housing Phase II</b>
+                </td>
+                <td>Gazipur</td>
+                <td>Nusrat Jahan</td>
+                <td>৳14,20,000</td>
+                <td>
+                  10 Jul 2026
+                  <small>Due 20 Dec 2027</small>
+                </td>
+                <td>18%</td>
+                <td>
+                  <span class="status planning"> Planning </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
