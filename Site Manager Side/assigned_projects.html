@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConstructFlow - Assigned Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assigned_project_styles.css">
+</head>
+<body class="inter-normal">
+
+<!-- ================= SIDEBAR ================= -->
+<aside id="sidebar">
+  <div class="logo-box">
+    <div class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+    <div>
+      <h1 class="logo-title">ConstructFlow</h1>
+      <p class="logo-sub">SITE OPERATIONS</p>
+    </div>
+  </div>
+
+  <button class="cursor" id="site-switch">
+    <span><i class="fa-solid fa-location-dot"></i></span>
+    <span class="site-switch-txt">
+      <b>Tower A (PRJ-101)</b>
+      <small>Dhaka Site Zone</small>
+    </span>
+    <span><i class="fa-solid fa-sort"></i></span>
+  </button>
+
+  <p class="menu-label">OVERVIEW</p>
+  <a href="#" class="menu-item" id="menu-dashboard"><i class="fa-solid fa-table-cells-large"></i>Dashboard</a>
+  <a href="#" class="menu-item active" id="menu-projects"><i class="fa-solid fa-building"></i>Assigned Projects</a>
+
+  <p class="menu-label">SITE OPERATIONS</p>
+  <a href="#" class="menu-item" id="menu-tasks"><i class="fa-solid fa-circle-check"></i>Tasks &amp; Milestones</a>
+  <a href="#" class="menu-item" id="menu-reports"><i class="fa-solid fa-file-lines"></i>Progress &amp; Daily Reports</a>
+  <a href="#" class="menu-item" id="menu-quality"><i class="fa-solid fa-shield-halved"></i>Quality &amp; Safety</a>
+  <a href="#" class="menu-item" id="menu-crew"><i class="fa-solid fa-helmet-safety"></i>Crew &amp; Equipment</a>
+
+  <p class="menu-label">MATERIAL &amp; LOGISTICS</p>
+  <a href="#" class="menu-item" id="menu-inventory"><i class="fa-solid fa-boxes-stacked"></i>Material Inventory</a>
+  <a href="#" class="menu-item" id="menu-requests"><i class="fa-solid fa-clipboard-list"></i>Material Requests</a>
+  <a href="#" class="menu-item" id="menu-delivery"><i class="fa-solid fa-truck"></i>Delivery Receiving</a>
+
+  <div class="sidebar-bottom">
+    <a href="#" class="menu-item" id="menu-settings"><i class="fa-solid fa-gear"></i>Site Settings</a>
+    <a href="#" class="menu-item" id="menu-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+  </div>
+</aside>
+
+<!-- ================= MAIN AREA ================= -->
+<div class="main-area">
+
+  <header>
+    <nav id="topbar">
+      <div class="topbar-left">
+        <i class="fa-solid fa-bars cursor" id="menu-toggle"></i>
+        <span class="crumb">Site Manager</span>
+        <span class="crumb-sep">›</span>
+        <b class="crumb">Operations</b>
+        <span id="weather-pill"><i class="fa-solid fa-sun"></i> <b>31°C · Sunny · Dhaka Site #1</b></span>
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="topbar-search" type="text" placeholder="Search materials..."></div>
+      </div>
+      <div class="topbar-right">
+        <button class="btn btn-primary cursor" id="log-daily-top"><i class="fa-solid fa-plus"></i> Log Daily Report</button>
+        <span id="notify-bell"><i class="fa-solid fa-bell"></i><i class="bell-count">5</i></span>
+        <div id="user-box">
+          <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <b>Rahim Ahmed</b>
+            <small>Senior Site Manager</small>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <!-- ===== Page heading ===== -->
+    <section class="page-head">
+      <div>
+        <p class="console-label">● SITE SUPERVISION CONSOLE • CENTRAL DHAKA DIVISION</p>
+        <h1 class="page-title">Assigned Construction Projects</h1>
+        <p class="page-des">Manage on-site execution, concrete pour milestones, logistics pipeline, and daily<br>superintendent logs for zones under your direct operational mandate.</p>
+      </div>
+      <div class="page-actions">
+        <button class="btn cursor" id="export-btn"><i class="fa-solid fa-download"></i><br>Export<br>Shift<br>Dossier</button>
+        <button class="btn btn-primary cursor" id="new-inspection-btn"><i class="fa-solid fa-square-plus"></i> New Site<br>Inspection</button>
+      </div>
+    </section>
+
+    <!-- ===== Summary cards ===== -->
+    <section id="summary">
+      <div class="summary-card" id="summary-sites">
+        <p class="card-label">ACTIVE SUPERVISED SITES <span class="card-icon"><i class="fa-solid fa-building"></i></span></p>
+        <h2 class="card-big">2 Sites <small><i class="fa-solid fa-circle-dot"></i> 100% Online</small></h2>
+        <p class="card-note">Dhaka Metro Core (Zone 4 &amp; 9)</p>
+      </div>
+      <div class="summary-card" id="summary-crews">
+        <p class="card-label">SUBCONTRACTOR CREWS <span class="card-icon"><i class="fa-solid fa-people-group"></i></span></p>
+        <h2 class="card-big">14 Crews <small>240 Total Men</small></h2>
+        <p class="card-note">Steel, Shuttering, HVAC &amp; MEP</p>
+      </div>
+      <div class="summary-card" id="summary-capex">
+        <p class="card-label">SUPERVISED CAPEX <span class="card-icon"><i class="fa-solid fa-money-bill-wave"></i></span></p>
+        <h2 class="card-big">৳24.0M <small>Disbursed 68%</small></h2>
+        <p class="card-note">Site execution &amp; supply ledger</p>
+      </div>
+      <div class="summary-card" id="summary-milestone">
+        <p class="card-label">MILESTONE ACCURACY <span class="card-icon"><i class="fa-solid fa-gauge-high"></i></span></p>
+        <h2 class="card-big">94.2% <small><i class="fa-solid fa-arrow-up"></i> +2.1% SLA</small></h2>
+        <p class="card-note">Ahead of baseline schedule</p>
+      </div>
+    </section>
+
+    <!-- ===== Filter bar ===== -->
+    <section id="filter-bar">
+      <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="filter-search" type="text" placeholder="Filter by project title, code (PRJ-XXX), or sector..."></div>
+      <div class="filter-right">
+        <div id="filter-tabs">
+          <button class="tab active cursor" data-filter="all">All Active (2)</button>
+          <button class="tab cursor" data-filter="sub">Sub-structure</button>
+          <button class="tab cursor" data-filter="super">Superstructure</button>
+          <button class="tab cursor" data-filter="finish">Finishing</button>
+        </div>
+        <select id="sort-select">
+          <option>SORT: Milestone Progress (High to Low)</option>
+          <option>SORT: Project Name</option>
+          <option>SORT: Start Date</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT 1 ================= -->
+    <section class="project-card" id="project-101" data-category="super">
+      <div class="project-top">
+        <div class="project-icon" id="icon-101"><i class="fa-solid fa-building"></i></div>
+        <div class="project-info">
+          <p>
+            <span class="code">PRJ-101</span>
+            <span class="badge badge-green">● On Target</span>
+            <span class="badge badge-gray">Structural Package</span>
+          </p>
+          <h2 class="project-title">Residential Tower A</h2>
+          <p class="project-meta"><i class="fa-solid fa-location-dot"></i> Mirpur-12, Dhaka &nbsp;•&nbsp; <i class="fa-solid fa-shield-halved"></i> Role: <b>Lead Site Manager</b> &nbsp;•</p>
+          <p class="project-meta">Assigned by Admin Alex Morgan</p>
+        </div>
+        <div class="timeline-box" id="timeline-101">
+          <p><b><i class="fa-solid fa-calendar-days"></i> PROJECT TIMELINE</b></p>
+          <p><b>15 Jan 2026 — 30 Dec 2027</b></p>
+          <p id="time-elapsed">Month 10 of 24 (41.6% Time Elapsed)</p>
+        </div>
+      </div>
+
+      <div class="phase-box" id="phase-101">
+        <div class="phase-head">
+          <span><i class="fa-solid fa-flag"></i> Current Phase: <b>Structure &amp; Slabs — Floor 12 Casting Batch #4</b></span>
+          <span><b>72%</b> Physical Progress</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-101" style="width:72%"></div></div>
+        <div class="phase-steps">
+          <span>Piling &amp; Basements (Done)</span>
+          <span>Floors 1-11 Slabs (Complete)</span>
+          <b>Floor 12 Pour (Active)</b>
+          <span>Finishing &amp; MEP (Upcoming)</span>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card" id="stat-tasks-101">
+          <p class="card-label">ACTIVE TASKS <span><i class="fa-solid fa-list-check"></i></span></p>
+          <h3 class="stat-big">8 Operational</h3>
+          <p class="stat-note" id="ontrack-note">6 On track, 2 Quality sign-off</p>
+          <div class="mini-bar"><div id="tasks-fill" style="width:75%"></div></div>
+        </div>
+        <div class="stat-card" id="stat-material-101">
+          <p class="card-label">MATERIAL REQUESTS <span><i class="fa-solid fa-box-archive"></i></span></p>
+          <h3 class="stat-big">3 Batches</h3>
+          <p class="stat-note"><b id="pending-hq">1 Pending HQ</b> • 2 Approved on Site</p>
+          <div class="mini-bar" id="material-bar"><div></div><div></div><div></div></div>
+        </div>
+        <div class="stat-card" id="stat-labor-101">
+          <p class="card-label">LABOR ATTENDANCE <span><i class="fa-solid fa-id-card"></i></span></p>
+          <h3 class="stat-big">142 Workers</h3>
+          <p class="stat-note" id="safety-note"><i class="fa-solid fa-shield-halved"></i> 0 Open Safety Hazards</p>
+          <p class="stat-note">Day Shift active (Ends 18:00)</p>
+        </div>
+        <div class="stat-card" id="stat-chiefs-101">
+          <p class="card-label">FIELD CREW CHIEFS <span><i class="fa-solid fa-id-card"></i></span></p>
+          <p class="chief"><b>Karim Ullah</b><span class="tag">STRUCTURE</span></p>
+          <p class="chief"><b>Rafiqul Islam</b><span class="tag" id="tag-plumbing">PLUMBING</span></p>
+          <p class="stat-note" id="radio-note">Direct radio: Channel 04</p>
+        </div>
+      </div>
+
+      <div class="project-bottom">
+        <div class="chips">
+          <span class="chip" id="chip-slump"><i class="fa-solid fa-droplet"></i> Concrete Slump: 110mm (Batch C35)</span><br>
+          <span class="chip" id="chip-trucks"><i class="fa-solid fa-truck"></i> 2 Ready-Mix Trucks En Route</span>
+          <small id="last-sync">&nbsp; Last log synced: 14 mins ago</small>
+        </div>
+        <div class="project-buttons">
+          <p>
+            <button class="btn btn-small cursor" id="taskboard-101"><i class="fa-solid fa-table-columns"></i> Task Board</button>
+            <button class="btn btn-small cursor" id="materials-101"><i class="fa-solid fa-clipboard-list"></i> Materials</button>
+            <button class="btn btn-small cursor" id="logdaily-101"><i class="fa-solid fa-pen-to-square"></i> Log Daily Report</button>
+          </p>
+          <button class="btn btn-primary cursor" id="open-101">Open Site Workspace <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT 2 ================= -->
+    <section class="project-card" id="project-104" data-category="sub">
+      <div class="project-top">
+        <div class="project-icon" id="icon-104"><i class="fa-solid fa-landmark"></i></div>
+        <div class="project-info">
+          <p>
+            <span class="code">PRJ-104</span>
+            <span class="badge badge-yellow">● Attention Needed</span>
+            <span class="badge badge-gray">Basement &amp; Shoring</span>
+          </p>
+          <h2 class="project-title">City Center Plaza</h2>
+          <p class="project-meta"><i class="fa-solid fa-location-dot"></i> Motijheel Commercial Area, Dhaka &nbsp;•</p>
+          <p class="project-meta">Role: <b>Co-Site Manager</b> (Foundation &amp; Basement) &nbsp;•</p>
+          <p class="project-meta">Lead PM: Engr. Farhana Chowdhury</p>
+        </div>
+        <div class="timeline-box">
+          <p><b><i class="fa-solid fa-calendar-days"></i> PROJECT TIMELINE</b></p>
+          <p><b>01 Mar 2026 — 15 Nov 2027</b></p>
+          <p>Initial Sub-Structure Phase (Month 2 of 20)</p>
+        </div>
+      </div>
+
+      <div id="alert-104">
+        <span id="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        <div id="alert-text">
+          <b>Critical Supply Chain Block: Delayed 16mm Steel Rods Batch (18.5 Tons)</b>
+          <p>BSRM shipment delayed by 48 hours at Chittagong corridor. Raft casting preparation paused on Grid C-4. Emergency site transfer request #MR-89 awaits procurement officer action.</p>
+        </div>
+        <button class="btn cursor" id="review-shortages-btn">Review Shortages</button>
+      </div>
+
+      <div class="phase-box" id="phase-104">
+        <div class="phase-head">
+          <span><i class="fa-solid fa-person-digging"></i> Current Phase: <b>Raft Foundation &amp; Retaining Wall Anchorage</b></span>
+          <span><b>35%</b> Substructure Complete</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-104" style="width:35%"></div></div>
+        <div class="phase-steps">
+          <b>Piling &amp; Deep Excavation (Done)</b>
+          <b id="halted-step">Raft Foundation (Halted/35%)</b>
+          <span>Basement B1 &amp; B2 (Pending)</span>
+          <span>Ground Podium (Scheduled)</span>
+        </div>
+      </div>
+
+      <div class="stat-row" id="stat-row-104">
+        <div class="stat-card" id="stat-tasks-104">
+          <p class="card-label">ACTIVE SITE TASKS <span><i class="fa-solid fa-list"></i></span></p>
+          <h3 class="stat-big">5 Tasks</h3>
+          <p class="stat-note" id="blocked-note">2 Blocked by rebar supply</p>
+          <p class="stat-note">Excavation dewatering running 24/7</p>
+        </div>
+        <div class="stat-card" id="stat-stock-104">
+          <p class="card-label">STOCK WARNINGS <span id="stock-icon"><i class="fa-solid fa-triangle-exclamation"></i></span></p>
+          <h3 class="stat-big" id="urgent-title">2 Urgent Shortages</h3>
+          <p class="stat-note">16mm Fe500D Rebar • Bentonite Powder</p>
+          <p class="stat-note">Inter-site transfer from Mirpur Tower A u...</p>
+        </div>
+        <div class="stat-card" id="stat-labor-104">
+          <p class="card-label">LABOR COUNT <span><i class="fa-solid fa-id-card"></i></span></p>
+          <h3 class="stat-big">98 Workers</h3>
+          <p class="stat-note">Foundation rebar fixers on standby</p>
+          <p class="stat-note">Foreman: Tofazzal Hossain</p>
+        </div>
+      </div>
+
+      <div class="project-bottom">
+        <div class="chips">
+          <span class="chip" id="chip-water"><i class="fa-solid fa-water"></i> Groundwater level monitoring stable at -6.2m</span>
+        </div>
+        <div class="project-buttons" id="buttons-104">
+          <button class="btn btn-small cursor" id="dailylogs-104"><i class="fa-solid fa-book"></i> Daily Logs</button>
+          <button class="btn cursor" id="open-104">Open Site Workspace <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARCHIVE ================= -->
+    <section id="archive">
+      <div class="archive-head">
+        <h2 class="archive-title"><i class="fa-solid fa-box-archive"></i> Archived &amp; Handed Over Projects <span class="badge badge-blue">1 Completed Record</span></h2>
+        <button class="cursor" id="archive-toggle">Toggle Archive Details <i class="fa-solid fa-chevron-down"></i></button>
+      </div>
+      <div id="archive-092">
+        <div class="project-icon" id="icon-092"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="archive-info">
+          <p><b>Green Valley Phase 1</b> <span class="badge badge-blue">PRJ-092</span> <span class="badge badge-green">100% Completed</span></p>
+          <p class="project-meta">Location: Uttara Sector 14, Dhaka &nbsp;•&nbsp; Handover Date: <b>14 Nov 2025</b> &nbsp;•</p>
+          <p id="lti-note">Zero Lost Time Incidents (LTI) Reported</p>
+        </div>
+        <div class="archive-actions">
+          <button class="btn btn-small cursor" id="closeout-btn"><i class="fa-solid fa-clipboard-check"></i> View Closeout Audit</button>
+          <i class="fa-solid fa-download cursor" id="download-archive"></i>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

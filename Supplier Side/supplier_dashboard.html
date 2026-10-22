@@ -3,9 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supplier Dashboard</title>
+    <title>Supplier Operations Command</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">CF</div>
+                <div>
+                    <h2>ConstructFlow</h2>
+                    <p>SUPPLIER PORTAL</p>
+                </div>
+            </div>
+
+            <div class="company-box">
+                <h3>BuildMart Industrial</h3>
+                <p>Chattogram &amp; Dhaka</p>
+                <strong>4.9/5.0</strong>
+            </div>
+
+            <p class="side-label">OVERVIEW</p>
+            <a class="side-link selected" href="#">Dashboard</a>
+
+            <p class="side-label">CATALOG &amp; PRODUCTS</p>
+            <a class="side-link" href="#">Material Catalog</a>
+
+            <p class="side-label">PROCUREMENT &amp; BIDS</p>
+            <a class="side-link" href="#">Available RFQs <span class="small-badge green">3 New</span></a>
+            <a class="side-link" href="#">Quotations</a>
+            <a class="side-link" href="#">Purchase Orders <span class="small-badge blue">2 Pending</span></a>
+
+            <p class="side-label">LOGISTICS &amp; BILLING</p>
+            <a class="side-link" href="#">Delivery Logistics</a>
+            <a class="side-link" href="#">Invoices &amp; Payments</a>
+
+            <div class="sidebar-bottom">
+                <a class="side-link" href="#">Company Settings</a>
+                <a class="side-link" href="#">Support &amp; Helpdesk</a>
+                <a class="side-link sign-out" href="#">Sign Out</a>
+            </div>
+        </aside>
+
+
+
+            <main class="main-area">
+            <!-- Top bar -->
+            <div class="topbar">
+            <div class="top-left">
+            <div class="top-text">Supplier<br>Portal</div>
+            <div class="top-text">Operations<br>Workspace</div>
+            <div class="verified">Verified Grade-A Vendor #VND-4089</div>
+            </div>
+            <div class="top-right">
+            <div class="search-circle">Q</div>
+            <div class="payout">
+                <span class="payout-label">Pending<br>Payout:</span>
+                <span class="payout-amount">&#2547;4.85M</span>
+            </div>
+                    <div class="bell">3</div>
+                    <div class="user">
+                        <div class="user-text">
+                            <div>BuildMart Supplies</div>
+                            <div>Tariqul Islam</div>
+                        </div>
+                        <div class="avatar">T</div>
+                    </div>
+            </div>
+            </div>
+
+    <div class="page-content">
+
+
+                        <div class="page-content">
+                <p class="breadcrumb">SUPPLIER PORTAL <span>&gt;</span> DASHBOARD COMMAND</p>
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Supplier Operations<br>Command</h1>
+                        <p>Welcome back, <strong>Engr. Tariqul Islam.</strong> You have <span class="red-text">3 open RFQs</span> expiring soon and <span class="blue-text">2 Purchase Orders</span> awaiting dispatch confirmation.</p>
+                    </div>
+                    <div class="actions">
+                        <button>Update Catalog Stock</button>
+                        <button>Monthly Statement</button>
+                        <button class="primary-button">Submit New Quotation</button>
+                    </div>
+                </div>
+
+                <section class="summary-cards">
+                    <div class="summary-card">
+                        <p>Active Purchase Orders</p>
+                        <h2>7 Orders</h2>
+                        <div class="card-bottom"><span>Contracted Value:</span><strong>৳14.2M</strong></div>
+                        <div class="card-note">+12% vs last month</div>
+                    </div>
+                    <div class="summary-card">
+                        <p>Open RFQs to Bid</p>
+                        <h2>5 RFQs</h2>
+                        <div class="card-bottom"><span>Estimated Pool:</span><strong>৳8.6M</strong></div>
+                        <div class="card-note">High Win Rate</div>
+                    </div>
+                    <div class="summary-card">
+                        <p>Deliveries in Transit</p>
+                        <h2>4 Shipments</h2>
+                        <div class="card-bottom"><span>Fleet Active:</span><strong>3 Trucks + 1 Barge</strong></div>
+                        <div class="card-note">2 en route PRJ-101</div>
+                    </div>
+                    <div class="summary-card">
+                        <p>Outstanding Receivables</p>
+                        <h2>৳6.45M</h2>
+                        <div class="card-bottom"><span>Approved Payout:</span><strong class="green-text">৳3.2M (5d due)</strong></div>
+                        <div class="card-note">98% On-time Pay</div>
+                    </div>
+                </section>
+
+
+
+                                <div class="content-grid">
+                    <div class="left-column">
+                        <section class="panel">
+                            <div class="section-heading">
+                                <div>
+                                    <h2>Active Purchase Orders Needing Dispatch</h2>
+                                    <p>Contractual consignments with pending dock release or vehicle scheduling</p>
+                                </div>
+                                <span class="pill">3 Pending Action</span>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>PO Reference<br>&amp; Site</th>
+                                        <th>Material Description</th>
+                                        <th>Value (BDT)</th>
+                                        <th>Target Window</th>
+                                        <th>Logistics Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong class="blue-text">PO-2026-104</strong><br>Residential Tower A<br>Mirpur-11, Dhaka</td>
+                                        <td>500 Bags Portland Cement<br><span class="muted">Seven Rings Special Blend</span></td>
+                                        <td><strong>৳275,000</strong></td>
+                                        <td class="red-text">Today by 02:00 PM</td>
+                                        <td><span class="status purple">Ready for Dispatch</span></td>
+                                        <td><button class="table-button">Mark Dispatched</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="blue-text">PO-2026-101</strong><br>City Center Plaza<br>Motijheel C/A, Dhaka</td>
+                                        <td>25 MT BSRM 16mm TMT Bar<br><span class="muted">Grade 500W High Ductility</span></td>
+                                        <td><strong>৳2,450,000</strong></td>
+                                        <td>Tomorrow Morning</td>
+                                        <td><span class="status orange">In Packing Yard</span></td>
+                                        <td><button class="table-button light-button">Schedule Fleet</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="blue-text">PO-2026-098</strong><br>Commercial Complex B<br>Agrabad, Chattogram</td>
+                                        <td>800 CFT Coarse Aggregate<br><span class="muted">Sylhet Boulder Crushed 20mm</span></td>
+                                        <td><strong>৳96,000</strong></td>
+                                        <td>28 Oct 2026</td>
+                                        <td><span class="status green">Dispatched (DH-11-8932)</span></td>
+                                        <td><button class="table-button light-button">Track GPS</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+
+
+                                                <section class="panel quotation-panel">
+                            <div class="section-heading">
+                                <div>
+                                    <h2>Recent Quotation Submissions &amp; Status</h2>
+                                    <p>Real-time status updates on submitted price bids and tenders</p>
+                                </div>
+                                <a class="view-all" href="#">View All Quotes (24) &rarr;</a>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Quote ID &amp; Material</th>
+                                        <th>Destination Project</th>
+                                        <th>Bid Value</th>
+                                        <th>Submitted</th>
+                                        <th>Evaluation Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>QT-8841</strong><br>Ready-Mix Concrete C25 (280 m³)</td>
+                                        <td>Residential Tower A</td>
+                                        <td><strong>৳1,960,000</strong></td>
+                                        <td>2 days ago</td>
+                                        <td><span class="status blue-status">Under Evaluation (Rank 1)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>QT-8835</strong><br>Marine Plywood &amp; Shuttering Props</td>
+                                        <td>PRJ-104 Metro Depot</td>
+                                        <td><strong>৳450,000</strong></td>
+                                        <td>3 days ago</td>
+                                        <td><span class="status green">Accepted - PO Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>QT-8820</strong><br>25mm PVC Conduit Pipes (400m)</td>
+                                        <td>Residential Tower A</td>
+                                        <td><strong>৳185,000</strong></td>
+                                        <td>5 days ago</td>
+                                        <td><span class="status purple">Awarded (PO-2026-104)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>QT-8809</strong><br>Grade 60 Rebar 12mm</td>
+                                        <td>Green Valley Phase 1</td>
+                                        <td><strong>৳820,000</strong></td>
+                                        <td>1 week ago</td>
+                                        <td><span class="status gray">Not Selected</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+
+
+
+                                        <aside class="right-column">
+                        <section class="panel invoice-panel">
+                            <div class="section-heading">
+                                <h2>Quarterly Invoicing</h2>
+                                <span>Q4 FY26</span>
+                            </div>
+                            <div class="invoice-summary">
+                                <div class="total-circle"><span>TOTAL</span><strong>৳8.2M</strong></div>
+                                <div class="invoice-legend">
+                                    <p><span class="dot green-dot"></span>Paid &amp; Cleared: <strong>৳5.0M</strong></p>
+                                    <p><span class="dot blue-dot"></span>In Processing: <strong>৳2.1M</strong></p>
+                                    <p><span class="dot gray-dot"></span>Disputed / Held: <strong>৳0</strong></p>
+                                </div>
+                            </div>
+                            <button class="invoice-button">Generate Tax &amp; VAT Invoice</button>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
