@@ -441,3 +441,135 @@ h1 {
   font-size: 12px;
   cursor: pointer;
 }
+
+
+
+
+/* ---------- Table area ---------- */
+.lower-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.table-box {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px 14px;
+}
+
+.table-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.displayed {
+  background-color: #dbeafe;
+  color: #0b5cab;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.synced {
+  font-size: 11px;
+  color: #64748b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 10px;
+  color: #475569;
+  padding: 10px 8px;
+  background-color: #f8fafc;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 16px 8px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+.right { text-align: right; }
+
+.qt-id {
+  color: #0b5cab;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.rfq-id {
+  font-size: 9px;
+  color: #64748b;
+}
+
+.project {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.muted {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.muted-dark {
+  color: #64748b;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.total {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 12px;
+}
+
+.yellow-badge {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.green-badge {
+  background-color: #bbf7d0;
+  color: #0f6b4b;
+}
+
+.red-badge {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.table-footer {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #475569;
+}
