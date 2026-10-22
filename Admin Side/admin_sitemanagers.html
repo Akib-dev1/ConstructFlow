@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Site Manager Management</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <h3>ConstructFlow</h3>
+        <p>Admin Portal</p>
+      </div>
+
+      <p class="menu-title">OVERVIEW</p>
+      <a href="admin_dashboard.html">Dashboard</a>
+      <a href="admin_projects.html">Projects</a>
+      <a href="#">Project Monitoring</a>
+
+      <p class="menu-title">PEOPLE</p>
+      <a href="admin_sitemanagers.html" class="active"> Site Managers </a>
+      <a href="#">Suppliers</a>
+
+      <p class="menu-title">PROCUREMENT</p>
+      <a href="#">Material Requests</a>
+      <a href="#">RFQ Management</a>
+      <a href="#">Quotation Comparison</a>
+      <a href="#">Purchase Orders</a>
+
+      <p class="menu-title">FINANCE</p>
+      <a href="#">Budgets & Expenses</a>
+      <a href="#">Invoices & Payments</a>
+
+      <p class="menu-title">INSIGHTS</p>
+      <a href="#">Reports & Analytics</a>
+      <a href="#">Audit Logs</a>
+
+      <div class="sidebar-bottom">
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
+    <!-- Main Area -->
+    <div class="main">
+      <!-- Top Navigation -->
+      <div class="topbar">
+        <p>Admin &gt; Site Managers</p>
+
+        <div class="top-right">
+          <input type="text" placeholder="Search projects, suppliers..." />
+          <span>Notifications</span>
+          <span>Alex Morgan</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Page Heading -->
+        <div class="page-heading">
+          <div>
+            <h1>Site Manager Management</h1>
+            <p>
+              Manage Site Manager accounts, project assignments, and team
+              workloads across all construction sites.
+            </p>
+          </div>
+
+          <div class="heading-buttons">
+            <button>Export Managers</button>
+            <button class="primary-btn">+ Add Site Manager</button>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats manager-stats">
+          <div class="stat-card">
+            <p>Total Site Managers</p>
+            <h2>16</h2>
+            <small>Registered manager accounts</small>
+          </div>
+
+          <div class="stat-card">
+            <p>Active Managers</p>
+            <h2>13</h2>
+            <small class="green"> Currently on-duty </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Assigned Managers</p>
+            <h2>11</h2>
+            <small>Managing active projects</small>
+          </div>
+
+          <div class="stat-card">
+            <p>Unassigned Managers</p>
+            <h2>2</h2>
+            <small>Available for assignment</small>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="manager-filters">
+          <input type="text" placeholder="Search by manager name or email..." />
+
+          <select>
+            <option>Sort by Status</option>
+            <option>All Managers</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+
+          <select>
+            <option>All Assignments</option>
+            <option>Assigned</option>
+            <option>Unassigned</option>
+          </select>
+
+          <select>
+            <option>All Projects</option>
+            <option>Residential Tower A</option>
+            <option>Commercial Complex B</option>
+            <option>Green Valley Apartments</option>
+            <option>City Center Plaza</option>
+            <option>Office Building C</option>
+          </select>
+
+          <button>Reset</button>
+        </div>
+
+        <!-- Managers Table -->
+        <div class="projects-section">
+          <div class="manager-table-heading">
+            <div>
+              <h3>All Site Managers</h3>
+              <p>
+                Manage registered Site Managers, active site allocations, and
+                operational workloads.
+              </p>
+            </div>
+
+            <span class="manager-count"> 16 managers found </span>
+          </div>
+
+          <table class="manager-table">
+            <thead>
+              <tr>
+                <th>MANAGER</th>
+                <th>ID</th>
+                <th>CONTACT INFO</th>
+                <th>ASSIGNED PROJECTS</th>
+                <th>ACTIVE TASKS</th>
+                <th>STATUS</th>
+                <th>JOINED DATE</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <b>Rahim Ahmed</b>
+                  <small>Lead Site Engineer</small>
+                </td>
+                <td>SM-001</td>
+                <td>
+                  rahim.ahmed@constructflow.example
+                  <small>+880 1700-000001</small>
+                </td>
+                <td>
+                  <span class="project-badge"> 2 Projects </span>
+                  <small> Residential Tower A, Riverside Complex </small>
+                </td>
+                <td>14 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>05 Jan 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Karim Hasan</b>
+                  <small>Senior Civil Site Manager</small>
+                </td>
+                <td>SM-002</td>
+                <td>
+                  karim.hasan@constructflow.example
+                  <small>+880 1700-000002</small>
+                </td>
+                <td>
+                  <span class="project-badge"> 2 Projects </span>
+                  <small> Commercial Complex B, Metro Shopping Arcade </small>
+                </td>
+                <td>11 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>12 Jan 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Nusrat Jahan</b>
+                  <small>Quality & Site Manager</small>
+                </td>
+                <td>SM-003</td>
+                <td>
+                  nusrat.jahan@constructflow.example
+                  <small>+880 1700-000003</small>
+                </td>
+                <td>
+                  <span class="project-badge"> 2 Projects </span>
+                  <small>
+                    Green Valley Apartments, Sunrise Housing Phase II
+                  </small>
+                </td>
+                <td>9 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>20 Jan 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Tanvir Islam</b>
+                  <small>Site Operations Manager</small>
+                </td>
+                <td>SM-004</td>
+                <td>
+                  tanvir.islam@constructflow.example
+                  <small>+880 1700-000004</small>
+                </td>
+                <td>
+                  <span class="project-badge"> 1 Project </span>
+                  <small>City Center Plaza</small>
+                </td>
+                <td>8 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>01 Feb 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Mahmud Rahman</b>
+                  <small>Safety & Site Manager</small>
+                </td>
+                <td>SM-005</td>
+                <td>
+                  mahmud.rahman@constructflow.example
+                  <small>+880 1700-000005</small>
+                </td>
+                <td>
+                  <span class="project-badge"> 1 Project </span>
+                  <small>Office Building C</small>
+                </td>
+                <td>5 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>15 Feb 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Farhana Akter</b>
+                  <small>Site Engineer</small>
+                </td>
+                <td>SM-006</td>
+                <td>
+                  farhana.akter@constructflow.example
+                  <small>+880 1700-000006</small>
+                </td>
+                <td>
+                  <span class="unassigned-badge">
+                    0 Projects (Unassigned)
+                  </span>
+                </td>
+                <td>0 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>05 Mar 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Imran Hossain</b>
+                  <small>Junior Site Supervisor</small>
+                </td>
+                <td>SM-007</td>
+                <td>
+                  imran.hossain@constructflow.example
+                  <small>+880 1700-000007</small>
+                </td>
+                <td>
+                  <span class="unassigned-badge">
+                    0 Projects (Unassigned)
+                  </span>
+                </td>
+                <td>0 Tasks</td>
+                <td>
+                  <span class="status inactive"> Inactive </span>
+                </td>
+                <td>12 Mar 2026</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <b>Sadia Rahman</b>
+                  <small>Civil Site Supervisor</small>
+                </td>
+                <td>SM-008</td>
+                <td>
+                  sadia.rahman@constructflow.example
+                  <small>+880 1700-000008</small>
+                </td>
+                <td>
+                  <span class="unassigned-badge">
+                    0 Projects (Unassigned)
+                  </span>
+                </td>
+                <td>0 Tasks</td>
+                <td>
+                  <span class="status near-completion"> Active </span>
+                </td>
+                <td>20 Mar 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
