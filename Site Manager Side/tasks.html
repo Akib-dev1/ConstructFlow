@@ -12,7 +12,7 @@
 </head>
 <body class="inter-normal">
 
-<!-- ================= SIDEBAR ================= -->
+<!-- sidebar -->
 <aside id="sidebar">
   <div class="logo-box">
     <div class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
@@ -37,6 +37,7 @@
 
   <p class="menu-label">SITE OPERATIONS</p>
   <a href="#" class="menu-item active" id="menu-tasks"><i class="fa-solid fa-circle-check"></i>Tasks &amp; Milestones</a>
+
   <a href="#" class="menu-item" id="menu-reports"><i class="fa-solid fa-file-lines"></i>Progress &amp; Daily Reports</a>
   <a href="#" class="menu-item" id="menu-quality"><i class="fa-solid fa-shield-halved"></i>Quality &amp; Safety</a>
   <a href="#" class="menu-item" id="menu-crew"><i class="fa-solid fa-helmet-safety"></i>Crew &amp; Equipment</a>
@@ -46,13 +47,15 @@
   <a href="#" class="menu-item" id="menu-requests"><i class="fa-solid fa-clipboard-list"></i>Material Requests</a>
   <a href="#" class="menu-item" id="menu-delivery"><i class="fa-solid fa-truck"></i>Delivery Receiving</a>
 
+
+
   <div class="sidebar-bottom">
     <a href="#" class="menu-item" id="menu-settings"><i class="fa-solid fa-gear"></i>Site Settings</a>
     <a href="#" class="menu-item" id="menu-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
   </div>
 </aside>
 
-<!-- ================= MAIN AREA ================= -->
+<!-- main -->
 <div class="main-area">
 
   <header>
@@ -63,7 +66,10 @@
         <span class="crumb-sep">></span>
         <b class="crumb">Operations</b>
         <span id="weather-pill"><i class="fa-solid fa-sun"></i> <b>31°C · Sunny · Dhaka Site #1</b></span>
-        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="topbar-search" type="text" placeholder="Search materials..."></div>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="topbar-search" type="text" placeholder="Search materials...">
+        </div>
       </div>
       <div class="topbar-right">
         <button class="btn btn-primary cursor" id="log-daily-top"><i class="fa-solid fa-plus"></i> Log Daily Report</button>
@@ -81,10 +87,10 @@
 
   <main class="content">
 
-  <!-- ===== Page heading ===== -->
+  <!-- Page heading  -->
   <section class="page-head" id="tasks-head">
     <div>
-      <p class="console-label">● SITE EXECUTION PORTAL • PRJ-101 / SECTOR DHAKA-NORTH</p>
+      <p class="console-label"> SITE EXECUTION PORTAL • PRJ-101 / SECTOR DHAKA-NORTH</p>
       <h1 class="page-title">Tasks &amp; Milestone Management</h1>
       <p class="page-des">Track structural packages, mechanical rough-ins, pouring sequences,<br>and trade dependencies for Residential Tower A.</p>
     </div>
@@ -95,7 +101,7 @@
     </div>
   </section>
 
-  <!-- ===== Milestone banner ===== -->
+  <!-- Milestone banner -->
   <section id="milestone-banner">
     <span id="milestone-icon"><i class="fa-solid fa-flag"></i></span>
     <div id="milestone-text">
@@ -109,7 +115,7 @@
     </div>
   </section>
 
-  <!-- ===== Master phase trajectory ===== -->
+  <!-- Master phase trajectory  -->
   <section class="card" id="trajectory-card">
     <div class="head-row">
       <h2 class="card-title"><i class="fa-solid fa-chart-line" id="trend-icon"></i> Master Phase Trajectory</h2>
@@ -120,14 +126,18 @@
         <p class="phase-label"><span>PHASE 01</span><i class="fa-regular fa-circle-check"></i></p>
         <b class="phase-name">Substructure &amp; Basement</b>
         <p>Piling, Raft &amp; 3-Level Basements</p>
-        <div class="phase-bar"><div id="bar-1"></div></div>
+        <div class="phase-bar">
+          <div id="bar-1"></div>
+        </div>
         <p class="phase-foot" id="foot-1">100% Completed</p>
       </div>
       <div class="phase-item" id="phase-2">
         <p class="phase-label"><span>PHASE 02</span><i class="fa-regular fa-circle-check"></i></p>
         <b class="phase-name">Core Structure Fl. 1-10</b>
         <p>Columns, Slabs &amp; Lift Shear Walls</p>
-        <div class="phase-bar"><div id="bar-2"></div></div>
+        <div class="phase-bar">
+          <div id="bar-2"></div>
+        </div>
         <p class="phase-foot" id="foot-2">100% Completed</p>
       </div>
       <div class="phase-item" id="phase-3">
@@ -135,7 +145,7 @@
         <b class="phase-name">Core Structure Fl. 11-20</b>
         <p>Floor 12 Prep &amp; Formwork Erection</p>
         <div class="phase-bar"><div id="bar-3"></div></div>
-        <p class="phase-foot" id="foot-3">68% Finished <small>Target Dec ’26</small></p>
+        <p class="phase-foot" id="foot-3">68% Finished <small>Target Dec '26</small></p>
       </div>
       <div class="phase-item" id="phase-4">
         <p class="phase-label"><span>PHASE 04</span><i class="fa-regular fa-clock"></i></p>
@@ -154,7 +164,7 @@
     </div>
   </section>
 
-  <!-- ===== Task table (left) + side cards (right) ===== -->
+  <!-- table -->
   <section class="two-col" id="tasks-main-row">
     <div class="col">
       <div class="card" id="task-table-card">
@@ -262,18 +272,8 @@
         <div class="trade-row"><div class="trade-top"><span>QA/QC &amp; Safety Officers</span><b>2 Officers</b></div><div class="trade-bar"><div id="tfill-5"></div></div></div>
       </div>
 
-      <div class="card" id="readiness-card">
-        <div class="head-row"><p class="card-label">PRE-POUR READINESS</p><i class="fa-solid fa-droplet" id="drop-icon"></i></div>
-        <div id="ready-main">
-          <div id="ring"><span>85%</span></div>
-          <div>
-            <b>12th Floor Casting</b>
-            <p class="note">Scheduled volume: 280 m³</p>
-            <p id="weather-ok">Weather: Favorable (Dry 31°C)</p>
-          </div>
-        </div>
-        <div class="head-row" id="slump-row"><span>Slump Target: 120 ± 25 mm</span><a href="#" id="view-spec">View Spec</a></div>
-      </div>
+
+
     </div>
   </section>
 
