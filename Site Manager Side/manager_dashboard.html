@@ -1,11 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manager Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConstructFlow - Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="dashboard_styles.css">
 </head>
-<body>
+<body class="inter-normal">
+
+<!--  SIDEBAR  -->
+<aside id="sidebar">
+  <div class="logo-box">
+    <div class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+    <div>
+      <h1 class="logo-title">ConstructFlow</h1>
+      <p class="logo-sub">SITE OPERATIONS</p>
+    </div>
+  </div>
+
+  <button class="cursor" id="site-switch">
+    <span><i class="fa-solid fa-location-dot"></i></span>
+    <span class="site-switch-txt">
+      <b>Tower A (PRJ-101)</b>
+      <small>Dhaka Site Zone</small>
+    </span>
+    <span><i class="fa-solid fa-sort"></i></span>
+  </button>
+
+  <p class="menu-label">OVERVIEW</p>
+  <a href="#" class="menu-item active" id="menu-dashboard"><i class="fa-solid fa-table-cells-large"></i>Dashboard</a>
+  <a href="#" class="menu-item" id="menu-projects"><i class="fa-solid fa-building"></i>Assigned Projects</a>
+
+  <p class="menu-label">SITE OPERATIONS</p>
+  <a href="#" class="menu-item" id="menu-tasks"><i class="fa-solid fa-circle-check"></i>Tasks &amp; Milestones</a>
+  <a href="#" class="menu-item" id="menu-reports"><i class="fa-solid fa-file-lines"></i>Progress &amp; Daily Reports</a>
+  <a href="#" class="menu-item" id="menu-quality"><i class="fa-solid fa-shield-halved"></i>Quality &amp; Safety</a>
+  <a href="#" class="menu-item" id="menu-crew"><i class="fa-solid fa-helmet-safety"></i>Crew &amp; Equipment</a>
+
+  <p class="menu-label">MATERIAL &amp; LOGISTICS</p>
+  <a href="#" class="menu-item" id="menu-inventory"><i class="fa-solid fa-boxes-stacked"></i>Material Inventory</a>
+  <a href="#" class="menu-item" id="menu-requests"><i class="fa-solid fa-clipboard-list"></i>Material Requests</a>
+  <a href="#" class="menu-item" id="menu-delivery"><i class="fa-solid fa-truck"></i>Delivery Receiving</a>
+
+  <div class="sidebar-bottom">
+    <a href="#" class="menu-item" id="menu-settings"><i class="fa-solid fa-gear"></i>Site Settings</a>
+    <a href="#" class="menu-item" id="menu-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+  </div>
+</aside>
+
+<!--  MAIN AREA  -->
+<div class="main-area">
+
+  <header>
+    <nav id="topbar">
+      <div class="topbar-left">
+        <i class="fa-solid fa-bars cursor" id="menu-toggle"></i>
+        <span class="crumb">Site Manager</span>
+        <span class="crumb-sep">></span>
+        <b class="crumb">Operations</b>
+        <span id="weather-pill"><i class="fa-solid fa-sun"></i> <b>31°C · Sunny · Dhaka Site #1</b></span>
+        <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="topbar-search" type="text" placeholder="Search materials..."></div>
+      </div>
+      <div class="topbar-right">
+        <button class="btn btn-primary cursor" id="log-daily-top"><i class="fa-solid fa-plus"></i> Log Daily Report</button>
+        <span id="notify-bell"><i class="fa-solid fa-bell"></i><i class="bell-count">5</i></span>
+        <div id="user-box">
+          <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <b>Abdur Rahim Rafi</b>
+            <small>Senior Site Manager</small>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+
+  
+
+  <!-- Greeting  -->
+  <section class="page-head" id="greeting">
+    <div>
+      <p><span class="badge" id="zone-badge">PRIMARY ASSIGNED ZONE</span> <span id="approval-no">RAJUK Approval: #DHK/2023/882-C</span></p>
+      <h1 class="page-title">Good Morning, Abdur Rahim Rafi! <i class="fa-solid fa-person-digging" id="crane-icon"></i></h1>
+      <p class="page-des">Shift A (07:00 AM - 04:00 PM) • Residential Tower A, Mirpur DOHS, Dhaka • 142 Field Crew Deployed</p>
+    </div>
+    <div class="page-actions">
+      <button class="btn cursor" id="scan-slip-btn"><i class="fa-solid fa-qrcode"></i> Scan Inbound Slip</button>
+      <button class="btn cursor" id="requisition-btn"><i class="fa-solid fa-plus"></i> Material Requisition</button>
+      <button class="btn btn-primary cursor" id="new-log-btn"><i class="fa-solid fa-pen-to-square"></i> New Daily Site Log</button>
+    </div>
+  </section>
+
+  <!--  Four top cards  -->
+  <section class="card-row" id="top-cards">
+    <div class="card" id="assign-card">
+      <div class="card-top"><p class="card-label">ACTIVE ASSIGNMENTS</p><span class="card-icon"><i class="fa-solid fa-building"></i></span></div>
+      <h2 class="card-big">2 Projects</h2>
+      <div class="mini-row"><span>Tower A (PRJ-101)</span><b id="tower-pct">72%</b></div>
+      <div class="mini-bar"><div id="tower-fill"></div></div>
+      <div class="mini-row"><span>City Center Sub-struc...</span><b>35%</b></div>
+      <div class="mini-bar"><div id="plaza-fill"></div></div>
+      <a href="index.html" id="switch-link">Switch project scope <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="card" id="workload-card">
+      <div class="card-top"><p class="card-label">TODAY'S WORKLOAD</p><span class="card-icon"><i class="fa-solid fa-list-check"></i></span></div>
+      <h2 class="card-big">8 <small>In Progress</small></h2>
+      <p><span class="chip">3 Slab Pouring</span><span class="chip">2 Rebar Tie</span><span class="chip">1 Curing</span></p>
+      <div id="overdue-box"><i class="fa-solid fa-triangle-exclamation"></i> 1 Overdue: Beam Formwork Lvl 06</div>
+    </div>
+
+    <div class="card" id="inventory-card">
+      <div class="card-top"><p class="card-label">INVENTORY BUFFER</p><span class="card-icon" id="inventory-icon"><i class="fa-solid fa-box-archive"></i></span></div>
+      <h2 class="card-big" id="shortage-title">3 <small>Shortage Flags</small></h2>
+      <div class="stock-row"><span>Portland Cement<br>(Seven Rings)</span><b>50<br>Bags</b></div>
+      <div class="stock-row"><span>BSRM 12mm 500W<br>Steel</span><b>1.8<br>Tons</b></div>
+      <p id="po-note">Automatic PO trigger primed <i class="fa-solid fa-bolt"></i></p>
+    </div>
+
+    <div class="card" id="logistics-card">
+      <div class="card-top"><p class="card-label">LOGISTICS GATE</p><span class="card-icon"><i class="fa-solid fa-truck"></i></span></div>
+      <h2 class="card-big">2 Shipments</h2>
+      <ul id="ship-list">
+        <li id="ship-1">Truck DH-11-8932: At Gate</li>
+        <li id="ship-2">BuildMart Ready-Mix: In Transport</li>
+      </ul>
+      <button class="btn btn-small cursor" id="gate-console-btn">Open Receiving Gate Console</button>
+    </div>
+  </section>
+
+  <!-- Phase telemetry-->
+  <section id="telemetry-row">
+    <div class="card" id="phase-card">
+      <div class="title-row">
+        <div>
+          <p class="card-label">STRUCTURAL PHASE TELEMETRY</p>
+          <h2 class="card-title">Tower A Vertical Slicing • Floor 07 of 18</h2>
+        </div>
+        <span id="spec-pill"><i class="fa-solid fa-cube"></i> Concrete Spec: M-25 Grade (3500 PSI)</span>
+      </div>
+      <div id="seg-labels">
+        <span>Substructure &amp; Piling (Completed)</span>
+        <span>Columns L01-L06 (Cured)</span>
+        <span id="cur-label">Current: L07 Slab Casting</span>
+        <span>Roof Deck (L18 Target)</span>
+      </div>
+      <div id="seg-bar">
+        <div id="seg-1">Basement to L04 (100%)</div>
+        <div id="seg-2">L05-L06 (Ready)</div>
+        <div id="seg-3">L07 (Active)</div>
+        <div id="seg-4">L08 - L18 Pending</div>
+      </div>
+      <div id="three-boxes">
+        <div class="box" id="box-volume">Total Volume Poured<h3>2,840 m³</h3></div>
+        <div class="box" id="box-rebar">Rebar Bound to Date<h3>418.5 MT</h3></div>
+        <div class="box" id="box-next-pour">Next Slab Pour Date<h3>Tomorrow, 08:00 AM</h3></div>
+      </div>
+    </div>
+
     
+  </section>
+
+  <!--  Shift tasks + safety/workforce  -->
+  <section class="two-col">
+    <div class="col">
+      <div class="card" id="shift-tasks">
+        <div class="head-row">
+          <div>
+            <h2 class="card-title">Shift Tasks &amp; Milestones <span class="badge badge-gray">8 Active</span></h2>
+            <p class="note">Assigned priority workflows for Shift A crew supervisors</p>
+          </div>
+          <div>
+            <button class="btn btn-small cursor" id="zone-filter-btn">Filter: All Zones</button>
+            <button class="btn btn-small cursor" id="sliders-btn"><i class="fa-solid fa-sliders"></i></button>
+          </div>
+        </div>
+        <div id="task-list">
+          <div class="task-card" id="task-1">
+            <input type="checkbox">
+            <div class="task-body">
+              <span class="task-tag" id="tag-urgent">URGENT</span>
+              <div class="task-line"><span>Floor 07 Slab B Concrete Pour (45 m³)</span><span class="status-pill" id="pill-progress">In Progress (60%)</span></div>
+              <p class="task-meta"><i class="fa-solid fa-location-dot"></i> Floor 7 • Grid D-4 to H-9</p>
+              <p class="task-meta"><i class="fa-solid fa-user"></i> Crew #4 (M. Hossain - Foreman)</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical cursor"></i>
+          </div>
+          <div class="task-card" id="task-2">
+            <input type="checkbox">
+            <div class="task-body">
+              <span class="task-tag" id="tag-high">HIGH</span>
+              <div class="task-line"><span>Shear Wall SW-3 Rebar Placement &amp;...</span><span class="status-pill" id="pill-qa"><i class="fa-solid fa-circle-check"></i> Ready for QA Signoff</span></div>
+              <p class="task-meta"><i class="fa-solid fa-location-dot"></i> Core Lift Shaft #2</p>
+              <p class="task-meta"><i class="fa-solid fa-user"></i> Engr. Tanvir Ahmed (QA/QC)</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical cursor"></i>
+          </div>
+          <div class="task-card" id="task-3">
+            <input type="checkbox">
+            <div class="task-body">
+              <span class="task-tag" id="tag-blocked">BLOCKED</span>
+              <div class="task-line"><span>Floor 06 Perimeter Formwork Striking</span><span class="status-pill" id="pill-hold">Hold Pending Lab</span></div>
+              <p class="task-meta"><i class="fa-solid fa-location-dot"></i> South Elevation Bay</p>
+              <p class="task-meta"><i class="fa-solid fa-ban"></i> Awaiting 7-Day Cube Compressive Test</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical cursor"></i>
+          </div>
+          <div class="task-card" id="task-4">
+            <input type="checkbox">
+            <div class="task-body">
+              <span class="task-tag" id="tag-normal">NORMAL</span>
+              <div class="task-line"><span>Electrical Conduit &amp; Plumbing Sleeve Embedde...</span><span class="status-pill" id="pill-schedule">On Schedule</span></div>
+              <p class="task-meta"><i class="fa-solid fa-location-dot"></i> Floor 07 MEP Corridor</p>
+              <p class="task-meta"><i class="fa-solid fa-user"></i> ElectroMech Subcontractor (8 Crew)</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical cursor"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" id="safety-card">
+        <div class="head-row">
+          <h2 class="card-title"><i class="fa-solid fa-shield-halved" id="safety-icon"></i> Site Safety &amp; Weather</h2>
+          <span class="badge badge-blue">SAFE OPERATIONS</span>
+        </div>
+        <div id="weather-box">
+          <div id="weather-left"><i class="fa-solid fa-sun" id="sun-icon"></i><div><b id="temp">32°C</b><p class="note">Dhaka Hazy • Humidity 65%</p></div></div>
+          <p id="wind-note"><b>Wind: 12 km/h NE</b><br>Crane Boom Clear (&lt;45 km/h limit)</p>
+        </div>
+        <div id="safety-boxes">
+          <div class="box" id="box-ppe">PPE Compliance Audit<h3>98.4% <small>Target Met</small></h3><p>1 warning issued: harness hookup</p></div>
+          <div class="box" id="box-lti">Lost Time Incidents (LTI)<h3>0 Days <small>Today</small></h3><p>184 consecutive safe work days</p></div>
+        </div>
+      </div>
+
+      <div class="card" id="workforce-card">
+        <div class="head-row">
+          <div><h2 class="card-title">Workforce &amp; Heavy Rigging</h2><p class="note">Shift A Gate 01 Biometric Verification</p></div>
+          <b id="workforce-total">142</b>
+        </div>
+        <div class="work-row"><span><i class="dot" id="dot-1"></i>Masons &amp; Concreters</span><span>48</span></div>
+        <div class="work-row"><span><i class="dot" id="dot-2"></i>Steel Fixers &amp; Fitters</span><span>36</span></div>
+        <div class="work-row"><span><i class="dot" id="dot-3"></i>General Laborers (Shifting/Curing)</span><span>45</span></div>
+        <div class="work-row"><span><i class="dot" id="dot-4"></i>Heavy Equipment Operators</span><span>8</span></div>
+        <div class="work-row"><span><i class="dot" id="dot-5"></i>Field Engineers &amp; Foremen</span><span>5</span></div>
+        <p class="card-label" id="plant-label">RUNNING PLANT TELEMETRY</p>
+        <div id="plant-row">
+          <div class="plant"><b>Tower Crane #1</b><br>ACTIVE • 85% L/C</div>
+          <div class="plant"><b>Concrete Pump #2</b><br>PUMPING (BOOM)</div>
+          <div class="plant"><b>250kVA GenSet</b><br>STANDBY • 92% FUEL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Material requisitions + activity -->
+  <section class="supply-table">
+    <div class="card" id="requisition-card">
+      <div class="head-row">
+        <div><h2 class="card-title">Material Requisitions &amp; Supply Inflow</h2><p class="note">Active procurement pipeline for Dhaka site inventory restocking</p></div>
+        <a href="#" id="supply-link">View Full Supply Chain Log <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <table id="req-table">
+        <tr><th>REQ ID</th><th>MATERIAL &amp; QUANTITY</th><th>PRIORITY</th><th>HQ ADMIN APPROVAL</th><th>SUPPLIER / ETA</th><th>ACTION</th></tr>
+        <tr id="req-1">
+          <td>REQ-1042</td>
+          <td><b>Portland Cement (Seven Rings)</b><br>250 Bags (50kg bags) • ৳135,000</td>
+          <td><span class="prio" id="prio-1">Critical</span></td>
+          <td><span class="approved"><i class="fa-solid fa-circle-check"></i> Approved by Alex M.</span><br>PO #PO-9921 Released</td>
+          <td>Shun Shing Group<br><b>Today, 02:00 PM</b></td>
+          <td><button class="btn btn-primary btn-small cursor" id="gate-check-btn">Gate Check</button></td>
+        </tr>
+        <tr id="req-2">
+          <td>REQ-1039</td>
+          <td><b>500W Deformed Bar 16mm (BSRM)</b><br>12.5 Metric Tons • ৳1,187,500</td>
+          <td><span class="prio" id="prio-2">High</span></td>
+          <td><span class="approved"><i class="fa-solid fa-circle-check"></i> Approved by Alex M.</span><br>Dispatch from Chattogram Yard</td>
+          <td>BSRM Logistics<br>Tomorrow, 09:30 AM</td>
+          <td><button class="btn btn-small cursor" id="track-fleet-btn">Track Fleet</button></td>
+        </tr>
+        <tr id="req-3">
+          <td>REQ-1035</td>
+          <td><b>Coarse Aggregate (Sylhet Shingle)</b><br>800 CFT • ৳96,000</td>
+          <td><span class="prio" id="prio-3">Standard</span></td>
+          <td><i class="fa-regular fa-clock"></i> Pending Accounts Sign<br>Reviewing Rate Quotation</td>
+          <td>Bholaganj Quarry Lines<br>Oct 29, 2023</td>
+          <td><button class="btn btn-small cursor" id="details-btn">Details</button></td>
+        </tr>
+      </table>
+    </div>
+
+    
+  </section>
+
+  <!--  Bottom approval bar  -->
+  <section id="approval-bar">
+    <span id="approval-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <div id="approval-text">
+      <b>Next Milestone Approval Required</b>
+      <p>Floor 07 Slab B requires Site Manager final signoff before pouring concrete truck #03 dispatch.</p>
+    </div>
+    <button class="btn cursor" id="review-btn">Review Checksheet</button>
+    <button class="btn btn-primary cursor" id="approve-btn">Approve &amp; Authorize Pour</button>
+  </section>
+
+</main>
+
+</div>
+
 </body>
 </html>

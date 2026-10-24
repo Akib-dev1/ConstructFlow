@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConstructFlow - Tasks & Milestones</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="task_styles.css">
+</head>
+<body class="inter-normal">
+
+<!-- sidebar -->
+<aside id="sidebar">
+  <div class="logo-box">
+    <div class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+    <div>
+      <h1 class="logo-title">ConstructFlow</h1>
+      <p class="logo-sub">SITE OPERATIONS</p>
+    </div>
+  </div>
+
+  <button class="cursor" id="site-switch">
+    <span><i class="fa-solid fa-location-dot"></i></span>
+    <span class="site-switch-txt">
+      <b>Tower A (PRJ-101)</b>
+      <small>Dhaka Site Zone</small>
+    </span>
+    <span><i class="fa-solid fa-sort"></i></span>
+  </button>
+
+  <p class="menu-label">OVERVIEW</p>
+  <a href="#" class="menu-item" id="menu-dashboard"><i class="fa-solid fa-table-cells-large"></i>Dashboard</a>
+  <a href="#" class="menu-item" id="menu-projects"><i class="fa-solid fa-building"></i>Assigned Projects</a>
+
+  <p class="menu-label">SITE OPERATIONS</p>
+  <a href="#" class="menu-item active" id="menu-tasks"><i class="fa-solid fa-circle-check"></i>Tasks &amp; Milestones</a>
+
+  <a href="#" class="menu-item" id="menu-reports"><i class="fa-solid fa-file-lines"></i>Progress &amp; Daily Reports</a>
+  <a href="#" class="menu-item" id="menu-quality"><i class="fa-solid fa-shield-halved"></i>Quality &amp; Safety</a>
+  <a href="#" class="menu-item" id="menu-crew"><i class="fa-solid fa-helmet-safety"></i>Crew &amp; Equipment</a>
+
+  <p class="menu-label">MATERIAL &amp; LOGISTICS</p>
+  <a href="#" class="menu-item" id="menu-inventory"><i class="fa-solid fa-boxes-stacked"></i>Material Inventory</a>
+  <a href="#" class="menu-item" id="menu-requests"><i class="fa-solid fa-clipboard-list"></i>Material Requests</a>
+  <a href="#" class="menu-item" id="menu-delivery"><i class="fa-solid fa-truck"></i>Delivery Receiving</a>
+
+
+
+  <div class="sidebar-bottom">
+    <a href="#" class="menu-item" id="menu-settings"><i class="fa-solid fa-gear"></i>Site Settings</a>
+    <a href="#" class="menu-item" id="menu-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+  </div>
+</aside>
+
+<!-- main -->
+<div class="main-area">
+
+  <header>
+    <nav id="topbar">
+      <div class="topbar-left">
+        <i class="fa-solid fa-bars cursor" id="menu-toggle"></i>
+        <span class="crumb">Site Manager</span>
+        <span class="crumb-sep">></span>
+        <b class="crumb">Operations</b>
+        <span id="weather-pill"><i class="fa-solid fa-sun"></i> <b>31°C · Sunny · Dhaka Site #1</b></span>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="topbar-search" type="text" placeholder="Search materials...">
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="btn btn-primary cursor" id="log-daily-top"><i class="fa-solid fa-plus"></i> Log Daily Report</button>
+        <span id="notify-bell"><i class="fa-solid fa-bell"></i><i class="bell-count">5</i></span>
+        <div id="user-box">
+          <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <b>Abdur Rahim Rafi</b>
+            <small>Senior Site Manager</small>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+
+  <!-- Page heading  -->
+  <section class="page-head" id="tasks-head">
+    <div>
+      <p class="console-label"> SITE EXECUTION PORTAL • PRJ-101 / SECTOR DHAKA-NORTH</p>
+      <h1 class="page-title">Tasks &amp; Milestone Management</h1>
+      <p class="page-des">Track structural packages, mechanical rough-ins, pouring sequences,<br>and trade dependencies for Residential Tower A.</p>
+    </div>
+    <div class="page-actions">
+      <button class="btn cursor" id="gantt-btn"><i class="fa-solid fa-table-columns"></i> Gantt Timeline</button>
+      <button class="btn cursor" id="export-schedule-btn"><i class="fa-solid fa-download"></i> Export Shift Schedule</button>
+      <button class="btn btn-primary cursor" id="create-task-btn"><i class="fa-solid fa-square-plus"></i> Create Site Task</button>
+    </div>
+  </section>
+
+  <!-- Milestone banner -->
+  <section id="milestone-banner">
+    <span id="milestone-icon"><i class="fa-solid fa-flag"></i></span>
+    <div id="milestone-text">
+      <p><span class="m-pill" id="milestone-tag">CURRENT PHASE MILESTONE</span> • Due in 4 Days (28 Oct 2026) <span class="m-pill" id="milestone-ready">85% Ready</span></p>
+      <h2>12th Floor Slab Casting Complete (Grids A1-G7)</h2>
+      <p>4 sub-tasks remaining: Steel rebars tied, electrical drops laid, shuttering check pending structural sign-off.</p>
+    </div>
+    <div id="readiness-box">
+      <div><small>READINESS SCORE</small><h2>85 / 100</h2></div>
+      <button class="btn cursor" id="checklist-btn">Milestone Checklist</button>
+    </div>
+  </section>
+
+  <!-- Master phase trajectory  -->
+  <section class="card" id="trajectory-card">
+    <div class="head-row">
+      <h2 class="card-title"><i class="fa-solid fa-chart-line" id="trend-icon"></i> Master Phase Trajectory</h2>
+      <p class="note">Project Overall Completion: <b>54.2%</b></p>
+    </div>
+    <div id="phase-grid">
+      <div class="phase-item" id="phase-1">
+        <p class="phase-label"><span>PHASE 01</span><i class="fa-regular fa-circle-check"></i></p>
+        <b class="phase-name">Substructure &amp; Basement</b>
+        <p>Piling, Raft &amp; 3-Level Basements</p>
+        <div class="phase-bar">
+          <div id="bar-1"></div>
+        </div>
+        <p class="phase-foot" id="foot-1">100% Completed</p>
+      </div>
+      <div class="phase-item" id="phase-2">
+        <p class="phase-label"><span>PHASE 02</span><i class="fa-regular fa-circle-check"></i></p>
+        <b class="phase-name">Core Structure Fl. 1-10</b>
+        <p>Columns, Slabs &amp; Lift Shear Walls</p>
+        <div class="phase-bar">
+          <div id="bar-2"></div>
+        </div>
+        <p class="phase-foot" id="foot-2">100% Completed</p>
+      </div>
+      <div class="phase-item" id="phase-3">
+        <p class="phase-label"><span>PHASE 03 • ACTIVE</span><i class="fa-solid fa-spinner"></i></p>
+        <b class="phase-name">Core Structure Fl. 11-20</b>
+        <p>Floor 12 Prep &amp; Formwork Erection</p>
+        <div class="phase-bar"><div id="bar-3"></div></div>
+        <p class="phase-foot" id="foot-3">68% Finished <small>Target Dec '26</small></p>
+      </div>
+      <div class="phase-item" id="phase-4">
+        <p class="phase-label"><span>PHASE 04</span><i class="fa-regular fa-clock"></i></p>
+        <b class="phase-name">MEP &amp; Brickwork</b>
+        <p>Drywall, Plumbing &amp; Riser Conduits</p>
+        <div class="phase-bar"><div id="bar-4"></div></div>
+        <p class="phase-foot">Starts Nov 2026</p>
+      </div>
+      <div class="phase-item" id="phase-5">
+        <p class="phase-label"><span>PHASE 05</span><i class="fa-regular fa-clipboard"></i></p>
+        <b class="phase-name">Interior &amp; Handover</b>
+        <p>Façade Glazing, Elevators, QA/QC</p>
+        <div class="phase-bar"><div id="bar-5"></div></div>
+        <p class="phase-foot">Target Mid 2027</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- table -->
+  <section class="two-col" id="tasks-main-row">
+    <div class="col">
+      <div class="card" id="task-table-card">
+        <div class="toolbar">
+          <div id="view-toggle">
+            <button class="view-btn active cursor" id="view-list"><i class="fa-solid fa-list"></i> List View</button>
+            <button class="view-btn cursor" id="view-board"><i class="fa-solid fa-table-columns"></i> Board</button>
+            <button class="view-btn cursor" id="view-gantt"><i class="fa-solid fa-chart-gantt"></i> Gantt Chart</button>
+          </div>
+          <div>ZONE: <select id="zone-select"><option>Floor 12 — Structural Pour Zone</option><option>Floor 11</option><option>Basement</option></select></div>
+        </div>
+        <div class="filter-pills" id="filter-pills">
+          <button class="pill active cursor" data-filter="all">All Tasks <span class="count">24</span></button>
+          <button class="pill cursor" data-filter="progress">In Progress <span class="count">8</span></button>
+          <button class="pill cursor" data-filter="inspection">Ready for Inspection <span class="count">4</span></button>
+          <button class="pill cursor" data-filter="blocked">Blocked / Material Delay <span class="count">2</span></button>
+          <button class="pill cursor" data-filter="done">Completed <span class="count">10</span></button>
+          <p id="priority-box">Priority: <span class="badge" id="critical-only">Critical Only</span></p>
+        </div>
+
+        <table id="work-table">
+          <tr><th>WORK ITEM &amp; LOCATION</th><th>ASSIGNED TRADE CREW</th><th>MATERIAL DEPENDENCY</th><th>TIMELINE &amp; DUE</th></tr>
+          <tr id="row-1">
+            <td><span class="work-title"><i class="wdot" id="wdot-1"></i>Rebar placement for Beam B12 to B18</span>Grid 3-E to 6-F • Level 12 Slab</td>
+            <td>Crew A — Steel Binding<br>Lead: T. Ali (14 Fitters)</td>
+            <td><i class="fa-regular fa-circle-check" id="mat-icon-1"></i> Steel 16mm/20mm (500W) Stocked on Site (Bay 4)</td>
+            <td><span class="due-date">26 Oct 2026</span><span id="due-1">2 days remaining</span></td>
+          </tr>
+          <tr id="row-2">
+            <td><span class="work-title"><i class="wdot" id="wdot-2"></i>Formwork shuttering inspection</span>Columns C4 through C9 • Level 12 Perim</td>
+            <td>Bismillah Carpentry Guild<br>Lead: M. Rafiq (8 Carpenters)</td>
+            <td><i class="fa-regular fa-circle-check" id="mat-icon-2"></i> Marine Plywood &amp; Props Staged &amp; Secured</td>
+            <td><span class="due-date">25 Oct 2026</span><span id="due-2">Today (16:00 QA)</span></td>
+          </tr>
+          <tr id="row-3">
+            <td><span class="work-title"><i class="wdot" id="wdot-3"></i>Electrical conduit &amp; junction drops</span><span id="loc-3">Floor 12 Slab Core • Riser Shaft B</span></td>
+            <td>Subcon Apex Electricals<br>Lead: Engr. Shamim</td>
+            <td><i class="fa-solid fa-triangle-exclamation" id="mat-icon-3"></i> <b id="mat-text-3">25mm PVC Pipes Delayed</b> Vendor short-shipped 400m</td>
+            <td><span class="due-date">26 Oct 2026</span><span id="due-3">Affects pour schedule</span></td>
+          </tr>
+          <tr id="row-4">
+            <td><span class="work-title"><i class="wdot" id="wdot-4"></i>Batch Plant Mobilization &amp; Boom Pump</span>South Gate Access • Ground to Fl. 12</td>
+            <td>United Concrete Fleet<br>Fleet Dispatcher: Farhan</td>
+            <td><i class="fa-solid fa-truck" id="mat-icon-4"></i> C35 RMC (280 m³) Scheduled 28 Oct (06:00 AM)</td>
+            <td><span class="due-date">28 Oct 2026</span><span id="due-4">4 days remaining</span></td>
+          </tr>
+          <tr id="row-5">
+            <td><span class="work-title"><i class="wdot" id="wdot-5"></i>7-Day Concrete Cube Compression Test</span>Floor 11 Slab Pour Samples (Set C)</td>
+            <td>Quality Testing Lab<br>Lab Tech: K. Alam</td>
+            <td><i class="fa-solid fa-flask" id="mat-icon-5"></i> 6 Test Specimens Avg: 28.4 MPa (Passes 70%)</td>
+            <td><span class="due-date">24 Oct 2026</span><span id="due-5">Verified</span></td>
+          </tr>
+        </table>
+
+        <div id="table-footer">
+          <span>Showing <b>1 to 5</b> of <b>24</b> active site tasks</span>
+          <div id="pagination">
+            <i class="fa-solid fa-angle-left cursor"></i>
+            <span class="cursor">1</span><span class="cursor">2</span><span class="cursor">3</span>
+            <i class="fa-solid fa-angle-right cursor" id="page-next"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="photo-row">
+        <div class="photo-card" id="photo-card-1">
+          <div class="photo" id="photo-1">
+            <span class="photo-tag">Grid 4-D Rebar Layout</span><span class="photo-time">Captured Today 11:20 AM</span>
+          </div>
+          <div class="photo-caption"><div><b>Beam Tie Verification</b><span>Double-checked stirrup spacing @ 150mm c/c</span></div><i class="fa-solid fa-magnifying-glass-plus cursor"></i></div>
+        </div>
+        <div class="photo-card" id="photo-card-2">
+          <div class="photo" id="photo-2"><span class="photo-tag">Column C6 Shuttering</span><span class="photo-time">Captured Today 09:45 AM</span></div>
+          <div class="photo-caption"><div><b>Plumb-line &amp; Bracing</b><span>Vertical deviation under 3mm (Compliant)</span></div><i class="fa-solid fa-magnifying-glass-plus cursor"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div id="hold-card">
+        <h3><i class="fa-solid fa-circle-exclamation"></i> Critical Dependency Hold</h3>
+        <p><b>2 Tasks</b> are halted awaiting material batches. Floor 12 casting risks a 48-hour delay unless resolved today.</p>
+        <div class="hold-item" id="hold-1">
+          <span class="hold-label">CONDUIT SHORTAGE</span> Gate Slip #410
+          <b>400m 25mm PVC Rigid Conduits</b>
+          Supplier: PolyCable BD • Re-delivery ETA: 4:30 PM
+        </div>
+        <div class="hold-item" id="hold-2">
+          <span class="hold-label">ADMIXTURE CLEARANCE</span> Batch #902
+          <b>Retarder Chemical Dosage Sign-off</b>
+          Awaiting Consultant Structural Engr.
+        </div>
+        <button class="btn cursor" id="escalate-btn">Escalate to Procurement</button>
+      </div>
+
+      <div class="card" id="trade-card">
+        <div class="head-row">
+          <h2 class="card-title"><i class="fa-solid fa-people-group" id="trade-icon"></i> Active Trade Allocation</h2>
+          <span class="badge badge-blue">58 On Site</span>
+        </div>
+        <div class="trade-row"><div class="trade-top"><span>Steel Fixers &amp; Binders</span><b>18 Pax</b></div><div class="trade-bar"><div id="tfill-1"></div></div></div>
+        <div class="trade-row"><div class="trade-top"><span>Carpentry &amp; Staging Props</span><b>14 Pax</b></div><div class="trade-bar"><div id="tfill-2"></div></div></div>
+        <div class="trade-row"><div class="trade-top"><span>MEP Technicians</span><b>8 Pax</b></div><div class="trade-bar"><div id="tfill-3"></div></div></div>
+        <div class="trade-row"><div class="trade-top"><span>Helpers &amp; Unskilled Labor</span><b>16 Pax</b></div><div class="trade-bar"><div id="tfill-4"></div></div></div>
+        <div class="trade-row"><div class="trade-top"><span>QA/QC &amp; Safety Officers</span><b>2 Officers</b></div><div class="trade-bar"><div id="tfill-5"></div></div></div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+</main>
+
+</div>
+
+</body>
+</html>

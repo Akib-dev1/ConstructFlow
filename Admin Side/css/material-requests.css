@@ -1,0 +1,347 @@
+/* ConstructFlow - material-requests.css */
+
+/* Request Statistics */
+
+
+
+.request-stats {
+
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+.request-stats .stat-card {
+
+  flex: 1;
+
+  width: auto;
+
+  height: 135px;
+
+  padding: 18px 12px;
+
+}
+
+
+
+.request-stats .stat-card p {
+
+  font-size: 12px;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.request-stats .stat-card h2 {
+
+  font-size: 27px;
+
+  margin-bottom: 8px;
+
+}
+
+
+
+.request-stats .stat-card small {
+
+  font-size: 11px;
+
+}
+/* Request Filters */
+
+
+
+.request-filters {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background-color: white;
+
+  padding: 20px 15px;
+
+  border: 1px solid #dfe5ee;
+
+  border-radius: 10px;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+.request-filters input {
+
+  width: 260px;
+
+  padding: 11px;
+
+  border: 1px solid #dfe5ee;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+}
+
+
+
+.request-filters select {
+
+  padding: 11px 8px;
+
+  border: 1px solid #dfe5ee;
+
+  background-color: white;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+}
+
+
+
+.request-filters button {
+
+  padding: 11px;
+
+  color: #526783;
+
+}
+/* Request Table Heading */
+
+
+
+.request-table-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #dfe5ee;
+
+}
+
+
+
+.request-table-heading h3 {
+
+  font-size: 18px;
+
+  margin-bottom: 6px;
+
+}
+
+
+
+.request-table-heading p {
+
+  font-size: 12px;
+
+  color: #64748b;
+
+}
+
+
+
+.request-count {
+
+  background-color: #eaf1ff;
+
+  color: #2563eb;
+
+  padding: 7px 12px;
+
+  border-radius: 15px;
+
+  font-size: 12px;
+
+}
+/* Scrollable Table */
+
+
+
+.request-table-scroll {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+}
+/* Request Table */
+
+
+
+.request-table {
+
+  width: 100%;
+
+  min-width: 1050px;
+
+  border-collapse: collapse;
+
+}
+
+
+
+.request-table th {
+
+  padding: 15px 12px;
+
+  font-size: 11px;
+
+  color: #526783;
+
+  background-color: #f7f9fc;
+
+  text-align: left;
+
+}
+
+
+
+.request-table td {
+
+  padding: 16px 12px;
+
+  font-size: 12px;
+
+  color: #475569;
+
+  vertical-align: middle;
+
+}
+
+
+
+.request-table td b {
+
+  color: #111827;
+
+  font-size: 12px;
+
+}
+
+
+
+.request-table td small {
+
+  display: flex;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  color: #71829c;
+
+}
+
+
+
+.request-table tbody tr:hover {
+
+  background-color: #f8faff;
+
+}
+/* Priority Labels */
+
+
+
+.priority {
+
+  padding: 5px 9px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+
+}
+
+
+
+.high {
+
+  background-color: #fff5e5;
+
+  color: #d97706;
+
+}
+
+
+
+.urgent {
+
+  background-color: #ffecec;
+
+  color: #dc2626;
+
+}
+
+
+
+.medium {
+
+  background-color: #eaf1ff;
+
+  color: #2563eb;
+
+}
+
+
+
+.low {
+
+  background-color: #f1f5f9;
+
+  color: #64748b;
+
+}
+/* Request Status */
+
+
+
+.pending {
+
+  background-color: #fff5e5;
+
+  color: #d97706;
+
+}
+
+
+
+.approved {
+
+  background-color: #e8f8ed;
+
+  color: #15803d;
+
+}
+
+
+
+.rejected {
+
+  background-color: #ffecec;
+
+  color: #dc2626;
+
+}

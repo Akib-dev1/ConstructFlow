@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConstructFlow - Material Inventory</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="material_inventory_styles.css">
+</head>
+<body class="inter-normal">
+
+<!-- SIDEBAR-->
+<aside id="sidebar">
+  <div class="logo-box">
+    <div class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+    <div>
+      <h1 class="logo-title">ConstructFlow</h1>
+      <p class="logo-sub">SITE OPERATIONS</p>
+    </div>
+  </div>
+
+  <button class="cursor" id="site-switch">
+    <span><i class="fa-solid fa-location-dot"></i></span>
+    <span class="site-switch-txt">
+      <b>Tower A (PRJ-101)</b>
+      <small>Dhaka Site Zone</small>
+    </span>
+    <span><i class="fa-solid fa-sort"></i></span>
+  </button>
+
+  <p class="menu-label">OVERVIEW</p>
+  <a href="#" class="menu-item" id="menu-dashboard"><i class="fa-solid fa-table-cells-large"></i>Dashboard</a>
+  <a href="#" class="menu-item" id="menu-projects"><i class="fa-solid fa-building"></i>Assigned Projects</a>
+
+  <p class="menu-label">SITE OPERATIONS</p>
+  <a href="#" class="menu-item" id="menu-tasks"><i class="fa-solid fa-circle-check"></i>Tasks &amp; Milestones</a>
+  <a href="#" class="menu-item" id="menu-reports"><i class="fa-solid fa-file-lines"></i>Progress &amp; Daily Reports</a>
+  <a href="#" class="menu-item" id="menu-quality"><i class="fa-solid fa-shield-halved"></i>Quality &amp; Safety</a>
+  <a href="#" class="menu-item" id="menu-crew"><i class="fa-solid fa-helmet-safety"></i>Crew &amp; Equipment</a>
+
+  <p class="menu-label">MATERIAL &amp; LOGISTICS</p>
+  <a href="#" class="menu-item active" id="menu-inventory"><i class="fa-solid fa-boxes-stacked"></i>Material Inventory</a>
+  <a href="#" class="menu-item" id="menu-requests"><i class="fa-solid fa-clipboard-list"></i>Material Requests</a>
+  <a href="#" class="menu-item" id="menu-delivery"><i class="fa-solid fa-truck"></i>Delivery Receiving</a>
+
+  <div class="sidebar-bottom">
+    <a href="#" class="menu-item" id="menu-settings"><i class="fa-solid fa-gear"></i>Site Settings</a>
+    <a href="#" class="menu-item" id="menu-signout"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+  </div>
+</aside>
+
+<!-- MAIN AREA  -->
+<div class="main-area">
+
+  <header>
+    <nav id="topbar">
+      <div class="topbar-left">
+        <i class="fa-solid fa-bars cursor" id="menu-toggle"></i>
+        <span class="crumb">Site Manager</span>
+        <span class="crumb-sep">></span>
+        <b class="crumb">Operations</b>
+        <span id="weather-pill"><i class="fa-solid fa-sun"></i> <b>31°C · Sunny · Dhaka Site #1</b></span>
+        <div class="search-box" id="topbar-search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="topbar-search" type="text" placeholder="Search materials..."></div>
+      </div>
+      <div class="topbar-right">
+        <button class="btn btn-primary cursor" id="log-daily-top"><i class="fa-solid fa-plus"></i> Log Daily Report</button>
+        <span id="notify-bell"><i class="fa-solid fa-bell"></i><i class="bell-count">5</i></span>
+        <div id="user-box">
+          <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <b>Abdur Rahim Rafi</b>
+            <small>Senior Site Manager</small>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+
+  <!--Page heading -->
+  <section class="page-head" id="inventory-head">
+    <div>
+      <p class="console-label" id="breadcrumb">Site Operations <i class="fa-solid fa-angle-right"></i> Material &amp; Logistics <i class="fa-solid fa-angle-right"></i> <b>Material Inventory</b></p>
+      <h1 class="page-title">Site Material Inventory &amp; Stock Control</h1>
+      <p class="page-des">Real-time physical stock metrics, yard bay allocation, BUET mill-test records, and active consumption telemetry for PRJ-101 Residential Tower A (Mirpur DOHS, Dhaka).</p>
+    </div>
+    <div class="page-actions">
+      <button class="btn cursor" id="export-ledger-btn"><i class="fa-solid fa-download"></i> Export Ledger</button>
+      <button class="btn cursor" id="audit-count-btn"><i class="fa-solid fa-clipboard-check"></i> Audit Stock Count</button>
+      <button class="btn btn-primary cursor" id="log-consumption-btn"><i class="fa-solid fa-cart-shopping"></i> + Log Material Consumption</button>
+    </div>
+  </section>
+
+  <!-- Summary cards -->
+  <section id="summary">
+    <div class="summary-card" id="sum-sku">
+      <p class="card-label">TRACKED SKU MATERIALS <span class="card-icon"><i class="fa-solid fa-list-check"></i></span></p>
+      <h2 class="card-big">36 <small>Active SKUs</small></h2>
+      <p class="card-note"><i class="dot" id="dot-accuracy"></i>98.2% Site Stock Accuracy</p>
+    </div>
+    <div class="summary-card" id="sum-critical">
+      <p class="card-label">CRITICAL STOCK ALERTS <span class="card-icon"><i class="fa-solid fa-triangle-exclamation"></i></span></p>
+      <h2 class="card-big">03 <small>Items Depleted</small></h2>
+      <p id="critical-badge">Below Buffer • Requisition Required</p>
+    </div>
+    <div class="summary-card" id="sum-value">
+      <p class="card-label">PHYSICAL STOCK VALUE <span class="card-icon"><i class="fa-solid fa-money-bill-wave"></i></span></p>
+      <h2 class="card-big">৳8,452,000</h2>
+      <p class="card-note"><i class="fa-solid fa-arrow-trend-down" id="arrow-consumed"></i> ৳1.2M consumed this cycle</p>
+    </div>
+    <div class="summary-card" id="sum-incoming">
+      <p class="card-label">INCOMING DELIVERIES <span class="card-icon"><i class="fa-solid fa-truck"></i></span></p>
+      <h2 class="card-big">2 Batches <small>ETA 2-4 hrs</small></h2>
+      <p class="card-note">500 Bags Seven Rings • 12.5 ...</p>
+    </div>
+  </section>
+
+  <!-- Filter bar -->
+  <section id="filter-bar">
+    <div class="search-box" id="inventory-search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="inventory-search" type="text" placeholder="Search by code, material, batch...">
+    </div>
+    <select id="category-select">
+      <option>All Categories (36)</option>
+      <option>Structural Steel</option>
+      <option>Cementitious</option>
+      <option>Aggregate</option>
+      <option>Formwork &amp; Timber</option>
+      <option>Chemicals</option>
+      <option>MEP &amp; Electrical</option>
+    </select>
+    <select id="zone-select">
+      <option>All Site Zones</option>
+      <option>Central Steel Yard</option>
+      <option>Silo &amp; Cement Dry Shed</option>
+      <option>Basement Chemical Depot</option>
+    </select>
+    <div id="stock-pills">
+      <button class="stock-pill active cursor" id="pill-all" data-filter="all">All Stock (36)</button>
+      <button class="stock-pill cursor" id="pill-adequate" data-filter="adequate">Adequate (28)</button>
+      <button class="stock-pill cursor" id="pill-low" data-filter="low"><i class="dot" id="dot-low"></i>Low Buffer (5)</button>
+      <button class="stock-pill cursor" id="pill-critical" data-filter="critical"><i class="dot" id="dot-critical"></i>Critical (3)</button>
+    </div>
+  </section>
+
+  <!--  Main area  -->
+  <section id="inventory-main">
+
+    <div class="col" id="left-col">
+
+      <div class="card" id="matrix-card">
+        <div class="head-row">
+          <div>
+            <h2 class="card-title">Material Stock Matrix &amp; Threshold Status</h2>
+            <p class="note">Continuous tracking against structural work schedule and Bangladesh National Building Code (BNBC) test clearance.</p>
+          </div>
+          <span class="badge badge-gray" id="ledger-rev">Ledger Rev: v5.8</span>
+        </div>
+
+        <div id="matrix-scroll">
+          <table id="matrix-table">
+            <tr>
+              <th>ITEM CODE &amp; DETAILS</th>
+              <th>CATEGORY / STANDARD</th>
+              <th>CURRENT STOCK VS MIN BUFFER</th>
+              <th>STORAGE ZONE / BIN</th>
+              <th>UNIT RATE &amp; VALUATION</th>
+              <th>BUFFER STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+
+            <tr id="mat-1">
+              <td>
+                <div class="item-cell"><span class="item-icon"><i class="fa-solid fa-cubes"></i></span><div><b class="item-name">BSRM 500W Deformed Bar 16mm</b><span class="item-code">RST-STL-01</span></div></div>
+            </td>
+              <td>
+                <span class="cat-pill">Structural Steel</span><br>BDS ISO 6935-2, Grade 500W
+            </td>
+              <td><div class="stock-top"><b class="stock-qty" id="stock-1">1.8 MT</b><small>Min: 15.0 MT</small></div><div class="stock-bar"><div id="sfill-1"></div></div><small class="stock-note" id="note-1">12% Buffer Level (Critically Depleted)</small></td>
+              <td><span class="zone-name">Steel Yard Bay 04 • East</span>(Crane Radius 2)</td>
+              
+              <td><span class="rate-main">৳95,000 / MT</span><b class="rate-val" id="val-1">৳171,000</b></td>
+              <td><span class="status-pill" id="status-1"><i class="fa-solid fa-triangle-exclamation"></i> Critical Shortage</span></td>
+              <td><button class="btn btn-primary btn-small cursor" id="restock-1">Restock</button></td>
+            </tr>
+
+            <tr id="mat-2">
+              <td><div class="item-cell"><span class="item-icon"><i class="fa-solid fa-boxes-stacked"></i></span><div><b class="item-name">Seven Rings Portland Composite Cement</b><span class="item-code">RST-CEM-04</span></div></div></td>
+              <td><span class="cat-pill">Cementitious</span><br>CEM II/B-M, 42.5N</td>
+              <td><div class="stock-top"><b class="stock-qty">180 Bags</b><small>Min: 400 Bags</small></div><div class="stock-bar"><div id="sfill-2"></div></div><small class="stock-note" id="note-2">45% Buffer (Inbound ETA 2hrs)</small></td>
+              <td><span class="zone-name">Covered Silo Shed B - Silo 2</span>Elevated Moisture-Free Pallet #12</td>
+              <td><span class="rate-main">৳550 / Bag</span><b class="rate-val">৳99,000</b></td>
+              <td><span class="status-pill" id="status-2"><i class="fa-regular fa-clock"></i> Low Buffer</span></td>
+              <td><button class="btn btn-small cursor" id="consume-2">Consume</button></td>
+            </tr>
+
+            <tr id="mat-3">
+              <td><div class="item-cell"><span class="item-icon"><i class="fa-solid fa-mountain"></i></span><div><b class="item-name">Sylhet Coarse Aggregate (Stone Chips 20mm)</b><span class="item-code">RST-AGG-02</span></div></div></td>
+              <td><span class="cat-pill">Aggregate</span><br>FM 2.80 - Crushed Shingle</td>
+              <td><div class="stock-top"><b class="stock-qty">1,450 CFT</b><small>Min: 800 CFT</small></div><div class="stock-bar"><div id="sfill-3"></div></div><small class="stock-note" id="note-3">181% Optimal Buffer</small></td>
+              <td><span class="zone-name">Graded Stockpile Zone A</span>North-West Perimeter Bunker</td>
+              <td><span class="rate-main">৳185 / CFT</span><b class="rate-val">৳268,250</b></td>
+              <td><span class="status-pill" id="status-3"><i class="fa-regular fa-circle-check"></i> Adequate</span></td>
+              <td><button class="btn btn-small cursor" id="consume-3">Consume</button></td>
+            </tr>
+
+            <tr id="mat-4">
+              <td><div class="item-cell"><span class="item-icon"><i class="fa-solid fa-layer-group"></i></span><div><b class="item-name">Marine Grade Shuttering Plywood 18mm</b><span class="item-code">RST-FRM-08</span></div></div></td>
+              <td><span class="cat-pill">Formwork &amp; Timber</span><br>BS 6566, Film-Faced Phenolic</td>
+              <td><div class="stock-top"><b class="stock-qty">420 Sheets</b><small>Min: 200 Sheets</small></div><div class="stock-bar"><div id="sfill-4"></div></div><small class="stock-note" id="note-4">210% Buffer (Sufficient for L14-L18)</small></td>
+              <td><span class="zone-name">Timber Depot - West Bay</span>Rack Section C2 (Waterproof Cover)</td>
+              <td><span class="rate-main">৳2,850 / Sheet</span><b class="rate-val">৳1,197,000</b></td>
+              <td><span class="status-pill" id="status-4"><i class="fa-regular fa-circle-check"></i> Adequate</span></td>
+              <td><button class="btn btn-small cursor" id="consume-4">Consume</button></td>
+            </tr>
+
+            <tr id="mat-5">
+              <td><div class="item-cell"><span class="item-icon"><i class="fa-solid fa-flask"></i></span><div><b class="item-name">Retarder Chemical Admixture Sika Plastocrete</b><span class="item-code">RST-CHM-03</span></div></div></td>
+              <td><span class="cat-pill">Chemicals</span><br>ASTM C494 Type B &amp; D</td>
+              <td><div class="stock-top"><b class="stock-qty" id="stock-5">2 Drums (400L)</b><small>Min: 6 Drums</small></div><div class="stock-bar"><div id="sfill-5"></div></div><small class="stock-note" id="note-5">33% Buffer (Critical for Casting Tomorrow)</small></td>
+              <td><span class="zone-name">Hazardous Admixture Locker 01</span>Ventilated Spill-containment zone</td>
+              <td><span class="rate-main">৳48,000 / Drum</span><b class="rate-val" id="val-5">৳96,000</b></td>
+              <td><span class="status-pill" id="status-5"><i class="fa-solid fa-triangle-exclamation"></i> Critical Shortage</span></td>
+              <td><button class="btn btn-primary btn-small cursor" id="restock-5">Restock</button></td>
+            </tr>
+
+            <tr id="mat-6">
+              <td><div class="item-cell"><span class="item-icon"><i class="fa-solid fa-plug"></i></span><div><b class="item-name">25mm Heavy PVC Conduit Pipes</b><span class="item-code">RST-MEP-11</span></div></div></td>
+              <td><span class="cat-pill">MEP &amp; Electrical</span><br>BDS 1302 / Class 4 Flame Retardant</td>
+              <td><div class="stock-top"><b class="stock-qty">850 Meters</b><small>Min: 500 Meters</small></div><div class="stock-bar"><div id="sfill-6"></div></div><small class="stock-note" id="note-6">170% Buffer Adequate</small></td>
+              <td><span class="zone-name">Basement 1 Electrical Staging</span>Rack E-10 (Secured Cage)</td>
+              <td><span class="rate-main">৳90 / Meter</span><b class="rate-val">৳76,500</b></td>
+              <td><span class="status-pill" id="status-6"><i class="fa-regular fa-circle-check"></i> Adequate</span></td>
+              <td><button class="btn btn-small cursor" id="consume-6">Consume</button></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="matrix-footer">
+          <span>Rows per page: <b>10</b> &nbsp; Showing <b>1-6</b> of <b>36</b> materials</span>
+          <div id="pagination">
+            <i class="fa-solid fa-angle-left cursor" id="page-prev"></i>
+            <span class="page active cursor">1</span>
+            <span class="page cursor">2</span>
+            <span class="page cursor">3</span>
+            <i class="fa-solid fa-angle-right cursor" id="page-next"></i>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div class="col" id="right-col">
+
+      <div class="card" id="storage-card">
+        <div class="head-row">
+          <h2 class="card-title"><i class="fa-solid fa-box-archive" id="storage-icon"></i> Storage Zone Capacities</h2>
+          <small class="note">3 Zones Total</small>
+        </div>
+        <div class="zone-block" id="zone-1">
+          <div class="zone-top"><span>Central Steel Yard (Bays 1-6)</span><b>82%</b></div>
+          <div class="zone-bar"><div id="zfill-1"></div></div>
+          <div class="zone-bottom"><span>Used: 164 MT / Cap: 200 MT</span><span id="znote-1">Near Staging Limit</span></div>
+        </div>
+        <div class="zone-block" id="zone-2">
+          <div class="zone-top"><span>Silo &amp; Cement Dry Shed A</span><b>64%</b></div>
+          <div class="zone-bar"><div id="zfill-2"></div></div>
+          <div class="zone-bottom"><span>Used: 640 Bags / Cap: 1,000 Bags</span><span id="znote-2">Adequate Headroom</span></div>
+        </div>
+        <div class="zone-block" id="zone-3">
+          <div class="zone-top"><span>Basement Chemical &amp; Additives Depot</span><b>45%</b></div>
+          <div class="zone-bar"><div id="zfill-3"></div></div>
+          <div class="zone-bottom"><span>Used: 9 Drums / Cap: 20 Drums</span><span id="znote-3">Clear Spill Berms</span></div>
+        </div>
+        <div id="layout-row"><span>Site Layout Map V4.2</span><a href="#" id="bin-plan">View Bin Plan <i class="fa-solid fa-arrow-right"></i></a></div>
+      </div>
+
+      
+
+      <div id="dispatch-card">
+        <i class="fa-solid fa-phone" id="dispatch-icon"></i>
+        <div id="dispatch-text"><b>Urgent Dispatch Line</b>BSRM &amp; Seven Rings Fast-Track</div>
+        <button class="btn cursor" id="speed-dial-btn">Speed Dial</button>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</div>
+
+</body>
+</html>
