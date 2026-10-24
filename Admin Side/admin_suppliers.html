@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Supplier Management</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/suppliers.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <h3>ConstructFlow</h3>
+        <p>Admin Portal</p>
+      </div>
+
+      <p class="menu-title">OVERVIEW</p>
+      <a href="admin_dashboard.html">Dashboard</a>
+      <a href="admin_projects.html">Projects</a>
+      <a href="#">Project Monitoring</a>
+
+      <p class="menu-title">PEOPLE</p>
+      <a href="admin_sitemanagers.html">Site Managers</a>
+      <a href="admin_suppliers.html" class="active">Suppliers</a>
+
+      <p class="menu-title">PROCUREMENT</p>
+      <a href="admin_material-requests.html">Material Requests</a>
+      <a href="#">RFQ Management</a>
+      <a href="#">Quotation Comparison</a>
+      <a href="#">Purchase Orders</a>
+
+      <p class="menu-title">FINANCE</p>
+      <a href="#">Budgets & Expenses</a>
+      <a href="#">Invoices & Payments</a>
+
+      <p class="menu-title">INSIGHTS</p>
+      <a href="#">Reports & Analytics</a>
+      <a href="#">Audit Logs</a>
+
+      <div class="sidebar-bottom">
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Top Navigation -->
+      <div class="topbar">
+        <p>Admin &gt; Suppliers</p>
+
+        <div class="top-right">
+          <input type="text" placeholder="Search projects, suppliers..." />
+          <span>Notifications</span>
+          <span>Alex Morgan</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- Page Heading -->
+        <div class="page-heading">
+          <div>
+            <h1>Supplier Management</h1>
+            <p>
+              Verify suppliers, manage supplier accounts, and monitor
+              procurement performance across all projects.
+            </p>
+          </div>
+
+          <div class="heading-buttons">
+            <button>Export Suppliers</button>
+            <button class="primary-btn">+ Add Supplier</button>
+          </div>
+        </div>
+
+        <!-- Supplier Statistics -->
+        <div class="stats supplier-stats">
+          <div class="stat-card">
+            <p>Total Suppliers</p>
+            <h2>38</h2>
+            <small>All registered accounts</small>
+          </div>
+
+          <div class="stat-card">
+            <p>Active Suppliers</p>
+            <h2>29</h2>
+            <small class="green"> Approved & operational </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Pending Verification</p>
+            <h2>5</h2>
+            <small class="orange"> Awaiting Admin review </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Suspended Suppliers</p>
+            <h2>2</h2>
+            <small class="red"> Temporarily restricted </small>
+          </div>
+
+          <div class="stat-card">
+            <p>Rejected Applications</p>
+            <h2>2</h2>
+            <small>Registration declined</small>
+          </div>
+        </div>
+
+        <!-- Pending Supplier Verifications -->
+        <div class="verification-section">
+          <div class="verification-heading">
+            <div>
+              <h3>Pending Supplier Verifications</h3>
+              <p>Supplier applications awaiting review and approval.</p>
+            </div>
+          </div>
+
+          <div class="verification-cards">
+            <!-- Supplier Card 1 -->
+            <div class="verification-card">
+              <h4>Prime Cement Distributors</h4>
+
+              <p><b>Category:</b> Cement, Sand</p>
+              <p><b>Location:</b> Dhaka</p>
+              <p><b>Applied:</b> 15 Oct 2026</p>
+              <p><b>Contact:</b> +880 1700-000010</p>
+
+              <button class="review-btn">Review Application</button>
+            </div>
+
+            <!-- Supplier Card 2 -->
+            <div class="verification-card">
+              <h4>GreenStone Materials</h4>
+
+              <p><b>Category:</b> Sand, Aggregates</p>
+              <p><b>Location:</b> Gazipur</p>
+              <p><b>Applied:</b> 16 Oct 2026</p>
+              <p><b>Contact:</b> +880 1700-000011</p>
+
+              <button class="review-btn">Review Application</button>
+            </div>
+
+            <!-- Supplier Card 3 -->
+            <div class="verification-card">
+              <h4>BuildTech Hardware</h4>
+
+              <p><b>Category:</b> Hardware, Electrical</p>
+              <p><b>Location:</b> Chattogram</p>
+              <p><b>Applied:</b> 17 Oct 2026</p>
+              <p><b>Contact:</b> +880 1700-000012</p>
+
+              <button class="review-btn">Review Application</button>
+            </div>
+
+            <!-- Supplier Card 4 -->
+            <div class="verification-card">
+              <h4>National Steel Suppliers</h4>
+
+              <p><b>Category:</b> Steel, Metal</p>
+              <p><b>Location:</b> Dhaka</p>
+              <p><b>Applied:</b> 18 Oct 2026</p>
+              <p><b>Contact:</b> +880 1700-000013</p>
+
+              <button class="review-btn">Review Application</button>
+            </div>
+
+            <!-- Supplier Card 5 -->
+            <div class="verification-card">
+              <h4>Eastern Construction Materials</h4>
+
+              <p><b>Category:</b> Bricks, Blocks</p>
+              <p><b>Location:</b> Sylhet</p>
+              <p><b>Applied:</b> 19 Oct 2026</p>
+              <p><b>Contact:</b> +880 1700-000014</p>
+
+              <button class="review-btn">Review Application</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supplier Filters -->
+        <div class="supplier-filters">
+          <input type="text" placeholder="Search supplier name, company..." />
+
+          <select>
+            <option>All Statuses</option>
+            <option>Active</option>
+            <option>Pending Verification</option>
+            <option>Suspended</option>
+            <option>Rejected</option>
+          </select>
+
+          <select>
+            <option>All Categories</option>
+            <option>Cement</option>
+            <option>Sand</option>
+            <option>Steel</option>
+            <option>Bricks</option>
+            <option>Electrical</option>
+            <option>Hardware</option>
+            <option>Aggregates</option>
+          </select>
+
+          <select>
+            <option>All Locations</option>
+            <option>Dhaka</option>
+            <option>Chattogram</option>
+            <option>Gazipur</option>
+            <option>Sylhet</option>
+          </select>
+
+          <select>
+            <option>Sort by Rating</option>
+            <option>Highest Rating</option>
+            <option>Lowest Rating</option>
+          </select>
+
+          <button>Reset</button>
+        </div>
+
+        <!-- Registered Suppliers Table -->
+        <div class="projects-section">
+          <div class="supplier-table-heading">
+            <div>
+              <h3>Registered Suppliers</h3>
+              <p>
+                Manage verified businesses, track credentials, and material
+                fulfillment.
+              </p>
+            </div>
+
+            <span class="supplier-count"> 38 suppliers found </span>
+          </div>
+
+          <div class="supplier-table-scroll">
+            <table class="supplier-table">
+              <thead>
+                <tr>
+                  <th>SUPPLIER</th>
+                  <th>SUPPLIER ID</th>
+                  <th>CONTACT INFO</th>
+                  <th>CATEGORIES</th>
+                  <th>COMPLETED ORDERS</th>
+                  <th>RATING</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <b>BuildMart Supplies</b>
+                    <small>Full Materials - Dhaka</small>
+                  </td>
+                  <td>SUP-001</td>
+                  <td>
+                    admin@buildmart.example
+                    <small>+880 1700-000001</small>
+                  </td>
+                  <td>Cement, Sand</td>
+                  <td>42 Orders</td>
+                  <td>4.8 / 5</td>
+                  <td>
+                    <span class="status approved"> Active </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>SteelPro Ltd.</b>
+                    <small>Steel Works - Chattogram</small>
+                  </td>
+                  <td>SUP-002</td>
+                  <td>
+                    sales@steelpro.example
+                    <small>+880 1700-000002</small>
+                  </td>
+                  <td>Steel, Metal</td>
+                  <td>25 Orders</td>
+                  <td>4.6 / 5</td>
+                  <td>
+                    <span class="status approved"> Active </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>BrickHouse Traders</b>
+                    <small>Material Supplier - Gazipur</small>
+                  </td>
+                  <td>SUP-003</td>
+                  <td>
+                    info@brickhouse.example
+                    <small>+880 1700-000003</small>
+                  </td>
+                  <td>Bricks, Blocks</td>
+                  <td>28 Orders</td>
+                  <td>4.4 / 5</td>
+                  <td>
+                    <span class="status approved"> Active </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>ElectroBuild Solutions</b>
+                    <small>Electrical Materials - Dhaka</small>
+                  </td>
+                  <td>SUP-004</td>
+                  <td>
+                    sales@electrobuild.example
+                    <small>+880 1700-000004</small>
+                  </td>
+                  <td>Electrical</td>
+                  <td>19 Orders</td>
+                  <td>4.7 / 5</td>
+                  <td>
+                    <span class="status approved"> Active </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>Prime Cement Distributors</b>
+                    <small>Cement Supply - Dhaka</small>
+                  </td>
+                  <td>SUP-005</td>
+                  <td>
+                    info@primecement.example
+                    <small>+880 1700-000005</small>
+                  </td>
+                  <td>Cement</td>
+                  <td>0 Orders</td>
+                  <td>Not Rated</td>
+                  <td>
+                    <span class="status pending"> Pending </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>GreenStone Materials</b>
+                    <small>Construction Materials - Gazipur</small>
+                  </td>
+                  <td>SUP-006</td>
+                  <td>
+                    sales@greenstone.example
+                    <small>+880 1700-000006</small>
+                  </td>
+                  <td>Sand, Aggregates</td>
+                  <td>0 Orders</td>
+                  <td>Not Rated</td>
+                  <td>
+                    <span class="status pending"> Pending </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>MetroPipe Industries</b>
+                    <small>Pipe Materials - Chattogram</small>
+                  </td>
+                  <td>SUP-007</td>
+                  <td>
+                    help@metropipe.example
+                    <small>+880 1700-000007</small>
+                  </td>
+                  <td>Plumbing</td>
+                  <td>8 Orders</td>
+                  <td>2.5 / 5</td>
+                  <td>
+                    <span class="status delayed"> Suspended </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <b>Delta Equipment Traders</b>
+                    <small>Heavy Equipment - Sylhet</small>
+                  </td>
+                  <td>SUP-008</td>
+                  <td>
+                    contact@delta.example
+                    <small>+880 1700-000008</small>
+                  </td>
+                  <td>Heavy Equipment</td>
+                  <td>0 Orders</td>
+                  <td>Not Rated</td>
+                  <td>
+                    <span class="status inactive"> Rejected </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
