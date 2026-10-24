@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConstructFlow - Available RFQs</title>
+    <link rel="stylesheet" href="RFQ_styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            <h2>⚒ ConstructFlow</h2>
+            <p>SUPPLIER PORTAL</p>
+        </div>
+
+        <div class="supplier-box">
+            <h4>BuildMart Industrial</h4>
+            <p>⌂ Chattogram & Dhaka</p>
+            <span>4.9/5.0 ★★★★★</span>
+        </div>
+
+        <nav class="menu">
+
+            <p class="menu-heading">OVERVIEW</p>
+            <a href="#">▦ Dashboard</a>
+
+            <p class="menu-heading">CATALOG & PRODUCTS</p>
+            <a href="#">▤ Material Catalog</a>
+
+            <p class="menu-heading">PROCUREMENT & BIDS</p>
+            <a href="#" class="active">⚒ Available RFQs</a>
+            <a href="#">▧ Quotations</a>
+            <a href="#">▣ Purchase Orders</a>
+
+            <p class="menu-heading">LOGISTICS & BILLING</p>
+            <a href="#">▱ Delivery Logistics</a>
+            <a href="#">▣ Invoices & Payments</a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>⚙ Company Settings</p>
+            <p>ⓘ Support & Helpdesk</p>
+            <p class="logout">↪ Sign Out</p>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="main">
+
+        <!-- TOP NAVBAR -->
+        <header class="topbar">
+
+            <div class="top-left">
+                <strong>Supplier Portal</strong>
+                <span>›</span>
+                <strong class="blue-text">Operations Workspace</strong>
+            </div>
+
+            <div class="top-right">
+                <span class="verified">✓ Verified Grade-A Vendor</span>
+                <span class="payout">Pending Payout: <b>৳4.85M</b></span>
+                <span class="notification">🔔</span>
+                <span class="username">Tariqul Islam</span>
+                <span class="avatar">●</span>
+            </div>
+
+        </header>
+
+        <div class="content">
+
+            <!-- PAGE HEADER -->
+            <section class="page-header" id="page-header">
+
+                <p class="breadcrumb">
+                    Supplier › Procurement & Bids › Available RFQs
+                </p>
+
+                <div class="heading-row">
+
+                    <div>
+                        <h1>Available Requests for Quotation</h1>
+                        <p class="description">
+                            Browse published procurement tenders and technical RFQs
+                            from ConstructFlow construction sites across Dhaka
+                            & Chattogram.
+                        </p>
+                    </div>
+
+                    <div class="header-buttons">
+                        <button class="btn btn-light">
+                            Bid Submission History
+                        </button>
+                        <button class="btn btn-primary">
+                            Alert Preferences
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SUMMARY CARDS -->
+            <section class="stats" id="statistics">
+
+                <div class="card stat-card">
+                    <p>Active RFQs Open</p>
+                    <h2>8</h2>
+                    <span class="small-badge">Across 3 Cities</span>
+                    <small>All grade-matched to your inventory</small>
+                </div>
+
+                <div class="card stat-card">
+                    <p>Est. Procurement Value</p>
+                    <h2>৳24.5M</h2>
+                    <span class="small-badge">+18% MoM</span>
+                    <small>Highest single tender: ৳12.8M</small>
+                </div>
+
+                <div class="card stat-card">
+                    <p>Closing within 24h</p>
+                    <h2 class="red-text">3</h2>
+                    <span class="small-badge red-badge">Immediate Priority</span>
+                    <small>1 pending draft quotation saved</small>
+                </div>
+
+                <div class="card stat-card">
+                    <p>Your Average Win Rate</p>
+                    <h2 class="green-text">42.8%</h2>
+                    <span class="small-badge green-badge">Top Tier Supplier</span>
+                    <small>+4.2% vs Dhaka regional avg</small>
+                </div>
+
+            </section>
+
+            <!-- SIMPLE FILTERS -->
+            <section class="card filters" id="filters">
+
+                <div class="filter-row">
+
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input
+                            type="search"
+                            id="rfq-search"
+                            placeholder="Search RFQ ID, project or material..."
+                        >
+                    </div>
+
+                    <select id="category-filter">
+                        <option>All Categories</option>
+                        <option>Steel & Rebar</option>
+                        <option>Cement & Admixture</option>
+                        <option>Ready-Mix Concrete</option>
+                        <option>Electrical & PVC</option>
+                    </select>
+
+                    <select id="location-filter">
+                        <option>All Locations</option>
+                        <option>Dhaka</option>
+                        <option>Chattogram</option>
+                    </select>
+
+                    <select id="deadline-filter">
+                        <option>Deadline: Soonest</option>
+                        <option>Deadline: Latest</option>
+                    </select>
+
+                </div>
+
+            </section>
+
+            <!-- QUOTATION CARDS -->
+            <section class="rfq-list" id="rfq-list">
+
+                <!-- RFQ 1 -->
+                <article class="card rfq-card" id="rfq-steel">
+
+                    <div class="rfq-top">
+                        <span class="badge urgent">URGENT - CLOSES IN 06H</span>
+                        <span class="badge match">100% CATALOG MATCH</span>
+                        <span class="badge category-badge">Steel & Rebar</span>
+                    </div>
+
+                    <p class="rfq-id">ID: RFQ-2026-089</p>
+
+                    <div class="rfq-heading">
+                        <div>
+                            <h2>Structural Deformed TMT Steel Bars (Grade 500W)</h2>
+                            <p class="project-info">
+                                ▣ PRJ-101 Residential Tower A
+                                · Mirpur DOHS, Dhaka
+                            </p>
+                        </div>
+
+                        <div class="price">
+                            <small>Est. Package</small>
+                            <strong>৳4,250,000</strong>
+                        </div>
+                    </div>
+
+                    <div class="details-box">
+                        <h4>Material Requirements</h4>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>16mm TMT Bar (Grade 500W)</strong>
+                                <p>Standard 12m commercial lengths</p>
+                            </div>
+                            <b>30 MT</b>
+                        </div>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>20mm TMT Bar (Grade 500W)</strong>
+                                <p>High-tensile seismic grade</p>
+                            </div>
+                            <b>15 MT</b>
+                        </div>
+                    </div>
+
+                    <div class="rfq-footer">
+                        <p>Delivery: Starting 28 Oct 2026</p>
+
+                        <div class="button-group">
+                            <button class="btn btn-light">View Details</button>
+                            <button class="btn btn-primary">Submit Quotation</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- RFQ 2 -->
+                <article class="card rfq-card" id="rfq-cement">
+
+                    <div class="rfq-top">
+                        <span class="badge urgent">CLOSES IN 18H</span>
+                        <span class="badge match">95% CATALOG MATCH</span>
+                        <span class="badge category-badge">Cement & Admixture</span>
+                    </div>
+
+                    <p class="rfq-id">ID: RFQ-2026-092</p>
+
+                    <div class="rfq-heading">
+                        <div>
+                            <h2>Ordinary Portland Cement (OPC 42.5N) & Chemical Admixture</h2>
+                            <p class="project-info">
+                                ▣ PRJ-104 City Center Plaza
+                                · Motijheel, Dhaka
+                            </p>
+                        </div>
+
+                        <div class="price">
+                            <small>Est. Package</small>
+                            <strong>৳820,000</strong>
+                        </div>
+                    </div>
+
+                    <div class="details-box">
+                        <h4>Material Requirements</h4>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>Ordinary Portland Cement</strong>
+                                <p>1,200 Bags × 50kg</p>
+                            </div>
+                            <b>60 MT</b>
+                        </div>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>Retarding Plasticizer</strong>
+                                <p>4 Drums × 200 Liters</p>
+                            </div>
+                            <b>800 Liters</b>
+                        </div>
+                    </div>
+
+                    <div class="rfq-footer">
+                        <p>Dispatch: 01 Nov 2026</p>
+
+                        <div class="button-group">
+                            <button class="btn btn-light">View Details</button>
+                            <button class="btn btn-primary">Submit Quotation</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- RFQ 3 -->
+                <article class="card rfq-card" id="rfq-concrete">
+
+                    <div class="rfq-top">
+                        <span class="badge normal">CLOSES IN 3 DAYS</span>
+                        <span class="badge category-badge">Ready-Mix Concrete</span>
+                    </div>
+
+                    <p class="rfq-id">ID: RFQ-2026-095</p>
+
+                    <div class="rfq-heading">
+                        <div>
+                            <h2>High-Performance C30 Ready-Mix Concrete Pour</h2>
+                            <p class="project-info">
+                                ▣ PRJ-101 Residential Tower A
+                                · 12th Floor Casting Zone
+                            </p>
+                        </div>
+
+                        <div class="price">
+                            <small>Target Budget</small>
+                            <strong>৳2,200,000</strong>
+                        </div>
+                    </div>
+
+                    <div class="details-box">
+                        <h4>Material Requirements</h4>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>C30 Ready-Mix Concrete</strong>
+                                <p>120±25mm Slump tolerance</p>
+                            </div>
+                            <b>280 m³</b>
+                        </div>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>36m Boom Placer</strong>
+                                <p>Direct contractor pumping required</p>
+                            </div>
+                            <b>Required</b>
+                        </div>
+                    </div>
+
+                    <div class="rfq-footer">
+                        <p>Depot radius: 6.8 km from site</p>
+
+                        <div class="button-group">
+                            <button class="btn btn-light">View Details</button>
+                            <button class="btn btn-primary">Submit Quotation</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- RFQ 4 -->
+                <article class="card rfq-card" id="rfq-pvc">
+
+                    <div class="rfq-top">
+                        <span class="badge normal">CLOSES IN 5 DAYS</span>
+                        <span class="badge category-badge">Electrical & PVC</span>
+                    </div>
+
+                    <p class="rfq-id">ID: RFQ-2026-097</p>
+
+                    <div class="rfq-heading">
+                        <div>
+                            <h2>Heavy PVC Electrical Conduits & Junction Boxes</h2>
+                            <p class="project-info">
+                                ▣ Commercial Complex B
+                                · Agrabad C/A, Chattogram
+                            </p>
+                        </div>
+
+                        <div class="price">
+                            <small>Est. Package</small>
+                            <strong>৳450,000</strong>
+                        </div>
+                    </div>
+
+                    <div class="details-box">
+                        <h4>Material Requirements</h4>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>25mm PVC Rigid Pipes</strong>
+                                <p>Fire-retardant grade with UV stabilizers</p>
+                            </div>
+                            <b>1,500 M</b>
+                        </div>
+
+                        <div class="material-row">
+                            <div>
+                                <strong>Deep Junction Boxes</strong>
+                                <p>BS 4607 certified</p>
+                            </div>
+                            <b>300 Pcs</b>
+                        </div>
+                    </div>
+
+                    <div class="rfq-footer">
+                        <p>Delivery: Chattogram Regional Hub</p>
+
+                        <div class="button-group">
+                            <button class="btn btn-light">View Details</button>
+                            <button class="btn btn-primary">Submit Quotation</button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>

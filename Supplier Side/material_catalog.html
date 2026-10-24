@@ -1,11 +1,545 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Material Catalog & Inventory</title>
+    <link rel="stylesheet" href="material_styles.css">
 </head>
 <body>
-    
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            <h2>⚒ ConstructFlow</h2>
+            <small>SUPPLIER PORTAL</small>
+        </div>
+
+        <div class="company-box">
+            <h4>BuildMart Industrial</h4>
+            <p>⌂ Chattogram & Dhaka</p>
+            <span>4.9/5.0 ★★★★★</span>
+        </div>
+
+        <nav class="menu">
+            <p class="menu-title">OVERVIEW</p>
+            <a href="#">▦ Dashboard</a>
+
+            <p class="menu-title">CATALOG & PRODUCTS</p>
+            <a href="#" class="active">▤ Material Catalog</a>
+
+            <p class="menu-title">PROCUREMENT & BIDS</p>
+            <a href="#">⚒ Available RFQs <span class="menu-badge">3 New</span></a>
+            <a href="#">▧ Quotations</a>
+            <a href="#">▣ Purchase Orders <span class="menu-badge badge-blue">2 Pending</span></a>
+
+            <p class="menu-title">LOGISTICS & BILLING</p>
+            <a href="#">▱ Delivery Logistics</a>
+            <a href="#">▣ Invoices & Payments</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>⚙ Company Settings</p>
+            <p>ⓘ Support & Helpdesk</p>
+            <p class="logout">↪ Sign Out</p>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="main">
+
+        <!-- TOP NAVBAR -->
+        <header class="topbar">
+            <div class="top-left">
+                <strong>Supplier Portal</strong>
+                <span>›</span>
+                <strong class="blue-text">Operations Workspace</strong>
+            </div>
+
+            <div class="top-right">
+                <span class="verified">✓ Verified Grade-A Vendor #VND-4089</span>
+                <span class="payout">Pending Payout: <b>৳4.85M</b></span>
+                <span class="notification">🔔</span>
+
+                <div class="user-info">
+                    <strong>BuildMart SuppliesEngr.</strong>
+                    <small>Tariqul Islam</small>
+                </div>
+
+                <span class="avatar">●</span>
+            </div>
+        </header>
+
+        <div class="page-content">
+
+            <!-- PAGE HEADER -->
+            <section class="page-header" id="catalog">
+
+                <p class="breadcrumb">
+                    Supplier › Catalog & Products › Material Catalog Management
+                </p>
+
+                <div class="heading-row">
+                    <div class="heading-content">
+                        <div class="title-row">
+                            <h1>Material Catalog<br>& Inventory</h1>
+                            <span class="company-tag">
+                                BuildMart Industrial<br>Supplies Ltd.
+                            </span>
+                        </div>
+
+                        <p class="description">
+                            Manage published product listings, unit pricing in BDT (৳),
+                            live warehouse stock levels, and supply minimums for active
+                            ConstructFlow construction job sites.
+                        </p>
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="btn btn-light">⇩ Export Price List</button>
+                        <button class="btn btn-light">▧ Bulk CSV Upload</button>
+                        <button class="btn btn-primary">⊕ Add Catalog Item</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATISTICS -->
+            <section class="stats-grid" id="statistics">
+
+                <div class="card stat-card">
+                    <div class="stat-heading">
+                        <p>LISTED MATERIALS</p>
+                        <span class="stat-icon icon-blue">▦</span>
+                    </div>
+                    <h2>48 <small>SKUs Active</small></h2>
+                    <p class="green-text">✓ Active in RFP Marketplace</p>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-heading">
+                        <p>TOTAL STOCK RESERVED</p>
+                        <span class="stat-icon icon-purple">▣</span>
+                    </div>
+                    <h2>1,240 <small>Tons & Units</small></h2>
+                    <p class="muted">⌂ Dhaka (Mirpur) & Chattogram</p>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-heading">
+                        <p>STOCK DEPLETION WARNINGS</p>
+                        <span class="stat-icon icon-red">⚠</span>
+                    </div>
+                    <h2 class="red-text">3 <small>Critical Items</small></h2>
+                    <p class="red-text">⚠ Reorder threshold breached</p>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-heading">
+                        <p>AVERAGE FULFILLMENT VELOCITY</p>
+                        <span class="stat-icon icon-green">◷</span>
+                    </div>
+                    <h2>24-48 <small>Hours</small></h2>
+                    <p class="green-text">▱ Same-day ready on prime routes</p>
+                </div>
+
+            </section>
+
+            <!-- SEARCH AND FILTERS -->
+            <section class="card filters" id="filters">
+
+                <div class="filter-row">
+
+                    <div class="search-box">
+                        <span class="search-icon">⌕</span>
+                        <input
+                            type="search"
+                            id="material-search"
+                            placeholder="Search item code, material name or brand..."
+                            aria-label="Search materials"
+                        >
+                    </div>
+
+                    <select id="category-filter">
+                        <option>All Material Categories</option>
+                        <option>Structural Steel</option>
+                        <option>Cement & Aggregates</option>
+                        <option>Sand & Aggregates</option>
+                        <option>Electrical & Plumbing</option>
+                        <option>Construction Chemicals</option>
+                    </select>
+
+                    <select id="depot-filter">
+                        <option>All Depots & Yards</option>
+                        <option>Dhaka Mirpur Yard</option>
+                        <option>Chattogram Terminal Yard</option>
+                    </select>
+
+                    <select id="stock-filter">
+                        <option>All Stock Statuses</option>
+                        <option>In Stock</option>
+                        <option>Low Stock</option>
+                        <option>Out of Stock</option>
+                    </select>
+
+                </div>
+
+                <div class="filter-bottom">
+                    <div class="view-switch">
+                        <button class="selected">▤ Table View</button>
+                        <button>▦ Card View</button>
+                    </div>
+
+                    <div class="filter-info">
+                        <span>Inventory Overview</span>
+                        <strong>48 Active Materials</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INVENTORY TABLE -->
+            <section class="card inventory-section" id="inventory">
+
+                <div class="section-heading">
+                    <div>
+                        <h3>Material Inventory</h3>
+                        <p>Manage available materials and warehouse stock levels</p>
+                    </div>
+                    <span class="count-badge">48 Materials</span>
+                </div>
+
+                <!-- SCROLLABLE TABLE -->
+                <div class="table-scroll">
+
+                    <table class="material-table">
+
+                        <thead>
+                            <tr>
+                                <th class="checkbox-column">
+                                    <input type="checkbox">
+                                </th>
+                                <th>ITEM CODE & DESCRIPTION</th>
+                                <th>CATEGORY</th>
+                                <th>BRAND / MANUFACTURER</th>
+                                <th>SPECIFICATION & GRADE</th>
+                                <th>AVAILABLE STOCK</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <!-- ITEM 1 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">⚙</div>
+                                        <div>
+                                            <strong>MAT-STL-01</strong>
+                                            <span class="small-tag">Prime</span>
+                                            <p>BSRM Deformed 500W Rebar (16mm)</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Structural Steel</span></td>
+                                <td>BSRM Steels Ltd.</td>
+                                <td class="spec">Grade 500W, ISO 6935-2, 12m length</td>
+                                <td class="stock">
+                                    110 MT
+                                    <small>Dhaka Mirpur Yard</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 2 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">⚙</div>
+                                        <div>
+                                            <strong>MAT-STL-02</strong>
+                                            <p>BSRM Deformed 500W Rebar (12mm)</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Structural Steel</span></td>
+                                <td>BSRM Steels Ltd.</td>
+                                <td class="spec">Grade 500W, high tensile rebar</td>
+                                <td class="stock">
+                                    85 MT
+                                    <small>Dhaka Yard</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 3 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">◇</div>
+                                        <div>
+                                            <strong>MAT-CEM-01</strong>
+                                            <p>Seven Rings Portland Composite Cement</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Cement & Aggregates</span></td>
+                                <td>Seven Rings Cement</td>
+                                <td class="spec">50kg Bag, BDS EN 197-1:2003 CEM II</td>
+                                <td class="stock">
+                                    3,400 Bags
+                                    <small>All Depots</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 4 -->
+                            <tr class="warning-row">
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">◇</div>
+                                        <div>
+                                            <strong>MAT-CEM-02</strong>
+                                            <p>ScanCement / Heidelberg OPC</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Cement & Aggregates</span></td>
+                                <td>Heidelberg Materials</td>
+                                <td class="spec">50kg Bag, BDS EN 197-1 CEM I 42.5N</td>
+                                <td class="stock">
+                                    450 Bags
+                                    <small>Minimum threshold</small>
+                                </td>
+                                <td><span class="status low-stock">Low Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 5 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">⌁</div>
+                                        <div>
+                                            <strong>MAT-AGG-01</strong>
+                                            <p>Sylhet High-Grade Coarse Shingle</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Sand & Aggregates</span></td>
+                                <td>Sylhet Quarry Direct</td>
+                                <td class="spec">20mm down-graded, washed river</td>
+                                <td class="stock">
+                                    4,200 CFT
+                                    <small>Dhaka Stock</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 6 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">▤</div>
+                                        <div>
+                                            <strong>MAT-WOD-01</strong>
+                                            <p>Heavy-Duty Marine Shuttering Plywood</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Formwork & Timber</span></td>
+                                <td>Crown Formwork</td>
+                                <td class="spec">18mm, waterproof phenolic resin</td>
+                                <td class="stock">
+                                    650 Sheets
+                                    <small>Chattogram</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 7 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">⌇</div>
+                                        <div>
+                                            <strong>MAT-ELE-03</strong>
+                                            <p>25mm PVC Rigid Heavy Electrical Conduits</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Electrical & Plumbing</span></td>
+                                <td>PolyCable BD</td>
+                                <td class="spec">Class 4 heavy gauge, flame retardant</td>
+                                <td class="stock">
+                                    1,200 M
+                                    <small>Available</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                            <!-- ITEM 8 -->
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="product">
+                                        <div class="product-icon">♧</div>
+                                        <div>
+                                            <strong>MAT-CHM-01</strong>
+                                            <p>Sika Plastocrete-N Water Reducing Retarder</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="category">Construction Chemicals</span></td>
+                                <td>Sika Bangladesh</td>
+                                <td class="spec">200L Drum, ASTM C494 Type D</td>
+                                <td class="stock">
+                                    75 Drums
+                                    <small>Factory Stock</small>
+                                </td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="table-footer">
+                    <span>Showing 8 material records</span>
+                    <span>Scroll to explore inventory ↕</span>
+                </div>
+
+            </section>
+
+            <!-- BOTTOM SECTION -->
+            <section class="bottom-grid">
+
+                <!-- DEPOT STOCK -->
+                <div class="card depot-card" id="depots">
+                    <h3>Depot Stock Spread</h3>
+                    <p class="muted">
+                        Real-time physical inventory aggregated by regional
+                        logistics hubs in Bangladesh.
+                    </p>
+
+                    <div class="depot-item">
+                        <div class="depot-heading">
+                            <b>● Dhaka Mirpur Central</b>
+                            <strong>760 MT / Units (61%)</strong>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-fill blue-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="depot-item">
+                        <div class="depot-heading">
+                            <b>● Chattogram Terminal Yard</b>
+                            <strong class="green-text">480 MT / Units (39%)</strong>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-fill green-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="depot-info">
+                        <div>
+                            <small>Dispatch SLA</small>
+                            <strong>99.4% On-Time</strong>
+                        </div>
+                        <div>
+                            <small>Next Delivery Batch</small>
+                            <strong class="green-text">Today, 04:00 PM</strong>
+                        </div>
+                    </div>
+
+                    <p class="depot-note">
+                        ✓ BSTI Certified Material Testing Reports uploaded
+                        for all Q1 Batches
+                    </p>
+                </div>
+
+                <!-- STOCK ADJUSTMENT -->
+                <div class="card adjustment-card" id="stock-adjustment">
+
+                    <div class="adjustment-heading">
+                        <div>
+                            <h3>Quick Stock Adjustment: MAT-STL-01</h3>
+                            <p>BSRM Deformed 500W Rebar (16mm) • Grade 500W</p>
+                        </div>
+                        <span>×</span>
+                    </div>
+
+                    <div class="yard-grid">
+
+                        <div class="yard">
+                            <div class="yard-title">
+                                <h4>⌂ Dhaka Mirpur Yard</h4>
+                                <span class="tag">Active Depot</span>
+                            </div>
+
+                            <div class="stock-line">
+                                <span>Current Physical Stock:</span>
+                                <strong>110.0 <small>MT</small></strong>
+                            </div>
+
+                            <div class="adjust-line">
+                                <label for="dhaka-adjustment">Adjustment:</label>
+                                <button>−</button>
+                                <input id="dhaka-adjustment" type="number" value="15.0">
+                                <button>+</button>
+                            </div>
+
+                            <p class="result">Resulting balance: 125.0 MT</p>
+                        </div>
+
+                        <div class="yard">
+                            <div class="yard-title">
+                                <h4>⚓ Chattogram Terminal Yard</h4>
+                                <span class="tag green-tag">Port Depot</span>
+                            </div>
+
+                            <div class="stock-line">
+                                <span>Current Physical Stock:</span>
+                                <strong>75.0 <small>MT</small></strong>
+                            </div>
+
+                            <div class="adjust-line">
+                                <label for="ctg-adjustment">Adjustment:</label>
+                                <button>−</button>
+                                <input id="ctg-adjustment" type="number" value="0.0">
+                                <button>+</button>
+                            </div>
+
+                            <p class="result muted">No change queued</p>
+                        </div>
+
+                    </div>
+
+                    <div class="adjustment-footer">
+                        <input type="text" placeholder="Audit Reason: Received shipment Challan #CH-">
+                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-primary">Save & Broadcast Stock</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+</div>
+
 </body>
 </html>
