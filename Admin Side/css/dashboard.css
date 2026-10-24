@@ -1,0 +1,118 @@
+/* ConstructFlow - dashboard.css */
+
+/* Quick Actions */
+
+.quick-actions {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+
+}
+
+.action-card {
+
+  width: 100%;
+
+  background-color: white;
+
+  padding: 20px 15px;
+
+  border: 1px solid #dfe5ee;
+
+  border-radius: 10px;
+
+}
+
+.action-card a {
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  text-decoration: none;
+
+}
+
+.action-card p {
+
+  margin-top: 10px;
+
+  font-size: 11px;
+
+  color: #71829c;
+
+}
+/* Dashboard section heading */
+.section-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px;
+
+}
+
+.section-heading h3 {
+
+  font-size: 17px;
+
+}
+
+.section-heading a {
+
+  font-size: 12px;
+
+  color: #2563eb;
+
+  text-decoration: none;
+
+}
+/* Filters */
+
+.filters {
+
+  display: flex;
+
+  gap: 10px;
+
+  padding: 15px;
+
+  background-color: #f7f9fc;
+
+}
+
+.filters input {
+
+  width: 300px;
+
+  padding: 10px;
+
+  border: 1px solid #dfe5ee;
+
+  border-radius: 6px;
+
+}
+
+.filters select {
+
+  padding: 10px;
+
+  border: 1px solid #dfe5ee;
+
+  border-radius: 6px;
+
+  background-color: white;
+
+}
+
+.filters select:first-of-type {
+
+  margin-left: auto;
+
+}
